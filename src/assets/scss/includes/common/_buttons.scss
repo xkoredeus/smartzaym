@@ -1,0 +1,202 @@
+button {
+  border: none;
+  outline: none;
+  box-shadow: unset;
+  background: none;
+  padding: 0;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 16px 24px;
+  border-radius: $radius2;
+  @include text;
+  @include font-medium;
+  @include ease-long;
+
+  @include r($breakpoint-2) {
+    font-size: 16px;
+  }
+
+  &-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    svg {
+      @include ease;
+      min-width: 24px;
+      width: 24px;
+      height: 24px;
+
+      @include r($breakpoint-2) {
+        height: 18px;
+        width: auto;
+      }
+    }
+  }
+
+  &-primary {
+    color: $white;
+    background-color: $purple;
+
+    &:hover {
+      color: $white;
+      background-color: $purple-100;
+    }
+
+    &:active {
+      background-color: $purple-200;
+    }
+
+    &:disabled {
+      background-color: $purple-300;
+    }
+
+    &.button-icon {
+      svg {
+        fill: $white;
+      }
+
+      &:hover {
+        svg {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &-secondary {
+    color: $purple;
+    background-color: $gray-400;
+
+    &:hover {
+      color: $purple;
+      background-color: $gray-500;
+    }
+
+    &:active {
+      background-color: $gray-600;
+    }
+
+    &:disabled {
+      background-color: $gray-700;
+    }
+
+    &.button-icon {
+      svg {
+        fill: $purple;
+      }
+    }
+  }
+
+  &-thirdary {
+    color: $white;
+    @include text2;
+    background-color: $green;
+
+    &:hover {
+      background-color: $green-100;
+    }
+
+    &:active {
+      background-color: $green-200;
+    }
+
+    &:disabled {
+      background-color: $green-300;
+    }
+  }
+
+  &-link {
+    padding: 16px 24px;
+    color: $purple;
+    @include text;
+
+
+
+    &:hover {
+      color: $purple-100;
+    }
+
+    &:active {
+      color: $purple-200;
+    }
+
+    &:disabled {
+      color: $purple-300;
+    }
+  }
+
+  &--md {
+    padding: 15px 18px;
+  }
+
+  &--sm {
+    @include text2;
+    padding: 12px 16px;
+    border-radius: $radius1;
+  }
+}
+
+.link {
+  display: inline-flex;
+  gap: 8px;
+  @include text4;
+
+  @include r($breakpoint-35) {
+    gap: 4px;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    fill: $dark-600;
+    @include ease;
+  }
+  span {
+    color: $dark-800;
+    @include ease;
+  }
+
+  &:hover {
+    svg {
+      fill: $dark-800;
+    }
+
+    span {
+      color: $dark;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $dark;
+    }
+  }
+}
+
+.link-underline {
+  color: currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+.link-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    @include r($breakpoint-2) {
+      height: 18px;
+      width: 18px;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+.slider {
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.swiper {
+  &-button {
+    &-prev,
+    &-next {
+      &::after {
+        display: none;
+      }
+
+      svg {
+        stroke: $gray-300;
+        @include ease;
+      }
+
+      &:hover {
+        svg {
+          stroke: $red;
+        }
+      }
+
+      &.swiper-button-disabled {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.swiper-pagination.swiper-pagination-bullets {
+  bottom: -30px;
+
+  @include r($breakpoint-3) {
+    bottom: -20px;
+  }
+
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $gray-300;
+  opacity: .3;
+
+  @include ease-long;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+
+    @include r($breakpoint-2) {
+      margin-right: 8px;
+    }
+  }
+
+  &-active {
+    opacity: 1;
+  }
+}
+
+.swiper-nav {
+  z-index: 1;
+
+  button {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: $white;
+    box-shadow: 0 100px 80px rgba(154, 181, 204, 0.17), 0 39.2305px 33.4221px rgba(154, 181, 204, 0.122205), 0 18.1605px 17.869px rgba(154, 181, 204, 0.101338), 0 8.10485px 10.0172px rgba(154, 181, 204, 0.085), 0 3.00102px 5.32008px rgba(154, 181, 204, 0.0686618), 0 0.644477px 2.21381px rgba(154, 181, 204, 0.0477948);
+
+
+    @include r($breakpoint-35) {
+      width: 44px;
+      height: 44px;
+    }
+
+    @include flex-center;
+    @include ease-long;
+    padding: 0;
+    border-radius: 50%;
+
+    &:first-child {
+      right: calc(100% - 32px);
+      @include r($breakpoint-2) {
+        right: calc(100% - 64px);
+      }
+      @include r($breakpoint-35) {
+        right: calc(100% - 28px);
+      }
+    }
+
+    &:last-child {
+      left: calc(100% - 32px);
+      @include r($breakpoint-2) {
+        left: calc(100% - 64px);
+      }
+      @include r($breakpoint-35) {
+        left: calc(100% - 28px);
+      }
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+      stroke: $dark-700;
+      @include ease-long;
+
+      @include r($breakpoint-35) {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &:hover {
+      svg {
+        fill: $dark;
+      }
+    }
+
+    &.swiper-button-disabled {
+      cursor: auto;
+      opacity: 0;
+      visibility: hidden;
+
+      svg {
+        fill: $gray-300;
+      }
+
+    }
+  }
+}
+
+.swiper-scrollbar {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #9B9B9B;
+  }
+
+  &:hover {
+    .swiper-scrollbar-drag {
+      transform: scaleX(1);
+    }
+  }
+}
+.swiper-scrollbar-drag {
+  background: #3E3E3E;
+  cursor: pointer;
+  transform-origin: bottom;
+  @include ease-long;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.swiper-scrollbar--white {
+  &::before {
+    background: #FEFEFE;
+  }
+
+  .swiper-scrollbar-drag {
+    background: #F7F7F7;
+  }
+}

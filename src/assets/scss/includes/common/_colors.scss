@@ -1,0 +1,80 @@
+$dark: #282B40;
+
+$purple: #732DA9;
+$purple-100: #8142B2;
+$purple-200: #672898;
+$purple-300: #C3A6D9;
+
+$purple-1-100: #DDCDEA;
+$purple-1-200: #BC9AD6;
+
+$green: #25BEAC;
+$green-100: #51CBBD;
+$green-200: #21AB9B;
+$green-300: #A5E2DB;
+
+$light-green-100: #E9F8F7; /* icon bg */
+$light-green-200: #C2ECE8; /* icon border */
+
+$white: #fff;
+$tr: transparent;
+
+$dark-30: #F2F2F2; /* button thirdary bg */
+$dark-100: #EAEAEC;
+$dark-200: #D4D5D9;
+$dark-300: #BFBFC6;
+$dark-400: #A9AAB2;
+$dark-500: #94959F;
+$dark-600: #7F808B;
+$dark-700: #6A6B78;
+$dark-800: #545565;
+$dark-900: #3E4053;
+
+$gray-100: #FAFAFA;
+
+$gray-200: #F9F9F9; /* card */
+$gray-300: #E5E5E5; /* card border */
+
+
+$gray-400: #EFEAF4; /* button secondary */
+$gray-500: #E4D9ED; /* button secondary */
+$gray-600: #DAC9E7;
+$gray-700: #EFEAF4;
+
+@mixin color-dark { color: $dark; }
+@mixin color-purple { color: $purple; }
+@mixin color-green { color: $green; }
+@mixin color-dark-30 { color: $dark-30; }
+@mixin color-dark-100 { color: $dark-100; }
+@mixin color-dark-200 { color: $dark-200; }
+@mixin color-dark-300 { color: $dark-300; }
+@mixin color-dark-400 { color: $dark-400; }
+@mixin color-dark-500 { color: $dark-500; }
+@mixin color-dark-600 { color: $dark-600; }
+@mixin color-dark-700 { color: $dark-700; }
+@mixin color-dark-800 { color: $dark-800; }
+@mixin color-dark-900 { color: $dark-900; }
+@mixin color-gray-200 { color: $gray-200; }
+@mixin color-gray-300 { color: $gray-300; }
+@mixin color-gray-400 { color: $gray-400; }
+
+.color-dark { @include color-dark };
+.color-purple { @include color-purple };
+.color-green { @include color-green };
+.color-dark-30 { @include color-dark-30; }
+.color-dark-100 { @include color-dark-100; }
+.color-dark-200 { @include color-dark-200; }
+.color-dark-300 { @include color-dark-300; }
+.color-dark-400 { @include color-dark-400; }
+.color-dark-500 { @include color-dark-500; }
+.color-dark-600 { @include color-dark-600; }
+.color-dark-700 { @include color-dark-700; }
+.color-dark-800 { @include color-dark-800; }
+.color-dark-900 { @include color-dark-900; }
+.color-gray-200 { @include color-gray-200; }
+.color-gray-300 { @include color-gray-300; }
+.color-gray-400 { @include color-gray-400; }
+
+.bg-gray-200 { background-color: $gray-200; }
+.bg-gray-300 { background-color: $gray-300; }
+

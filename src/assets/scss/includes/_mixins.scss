@@ -1,0 +1,115 @@
+@mixin ct {
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@mixin cv {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@mixin ovl {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin scroll-gray {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $tr;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 4px;
+    background: $gray-300;
+  }
+}
+
+@mixin scroll-min {
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $tr;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 10px;
+    background: $purple;
+  }
+}
+
+$slider-right-gap-md: 80px;
+$slider-right-gap-sm: 50px;
+$slider-right-gap-xs: 20px;
+
+@mixin slider-right-gap {
+  padding-right: $slider-right-gap-sm;
+
+  @include r($breakpoint-4) {
+    padding-right: $slider-right-gap-xs;
+  }
+}
+
+@mixin slider-right-gap-middle {
+  padding-right: $slider-right-gap-md;
+}
+
+
+@mixin scroll {
+  &::-webkit-scrollbar {
+    width: 15px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $gray-300;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 10px;
+    background: $purple-100;
+  }
+}
+
+@mixin ease {
+  transition: .3s all ease;
+}
+
+@mixin ease-long {
+  transition: .6s all ease;
+}
+
+@mixin r($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content
+  }
+}
+@mixin rmin($width) {
+  @media only screen and (min-width: $width + "px") {
+    @content
+  }
+}

@@ -1,0 +1,32 @@
+$font-thin: 'TTFirsNeue-Thin';
+$font-light: 'TTFirsNeue-Light';
+$font-extraLight: 'TTFirsNeue-ExtraLight';
+$font-regular: 'TTFirsNeue-Regular';
+$font-demiBold: 'TTFirsNeue-DemiBold';
+$font-medium: 'TTFirsNeue-Medium';
+$font-bold: 'TTFirsNeue-Bold';
+$font-extraBold: 'TTFirsNeue-ExtraBold';
+$font-black: 'TTFirsNeue-Black';
+$font-italic: 'TTFirsNeue-Italic';
+
+.font-thin { font-family: $font-thin; }
+.font-light { font-family: $font-light; }
+.font-extraLight { font-family: $font-extraLight; }
+.font-regular { font-family: $font-regular; }
+.font-demiBold { font-family: $font-demiBold; }
+.font-medium { font-family: $font-medium; }
+.font-bold { font-family: $font-bold; }
+.font-extraBold { font-family: $font-extraBold; }
+.font-black { font-family: $font-black; }
+.font-italic { font-family: $font-italic; }
+
+@mixin font-thin { font-family: $font-thin; }
+@mixin font-light { font-family: $font-light; }
+@mixin font-extraLight { font-family: $font-extraLight; }
+@mixin font-regular { font-family: $font-regular; }
+@mixin font-demiBold { font-family: $font-demiBold; }
+@mixin font-medium { font-family: $font-medium; }
+@mixin font-bold { font-family: $font-bold; }
+@mixin font-extraBold { font-family: $font-extraBold; }
+@mixin font-black { font-family: $font-black; }
+@mixin font-italic { font-family: $font-italic; }

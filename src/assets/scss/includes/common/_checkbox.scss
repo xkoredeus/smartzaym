@@ -1,0 +1,343 @@
+.checkbox {
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0;
+
+  &__text {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 27px;
+    display: flex;
+    align-items: center;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+    @include r($breakpoint-2) {
+      min-height: 20px;
+      padding-left: 30px;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: $white;
+      z-index: 1;
+      transform: translateY(2px);
+      @include ease-long;
+
+      @include r($breakpoint-2) {
+        width: 15px;
+        height: 15px;
+        left: 3px;
+        top: 3px;
+      }
+    }
+
+    span {
+      margin-top: -3px;
+
+      @include r($breakpoint-2) {
+        margin-top: 1px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-color: $white;
+      border: 1px solid $gray-300;
+
+      @include r($breakpoint-2) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-color: $primary;
+      opacity: 0;
+      transform: scale(.5);
+      transition: 0.3s;
+
+      @include r($breakpoint-2) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    cursor: pointer;
+    &:checked + .checkbox__text,
+    &:checked + .checkbox__text {
+      svg {
+        transform: translateY(0);
+      }
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.radio {
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0;
+
+  &__text {
+    display: inline-block;
+    position: relative;
+    padding: 12px 24px;
+    @include font-medium;
+    border-radius: $radius4;
+    background-color: $dark-30;
+    color: $dark;
+    @include ease-long;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+    @include r($breakpoint-2) {
+      padding: 12px 16px;
+    }
+    @include r($breakpoint-35) {
+      font-size: 12px;
+      padding: 8px 18px;
+    }
+
+    &:hover {
+      background-color: $dark-100;
+    }
+
+    //&:focus,
+    &:active {
+      background-color: $dark-200;
+    }
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    cursor: pointer;
+
+    &:disabled + .radio__text {
+      color: $dark-400;
+      background-color: $dark-30;
+    }
+
+    &:checked + .radio__text {
+      color: $white;
+      background-color: $green;
+    }
+  }
+
+}
+
+.checkbox-html {
+  width: 100%;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+
+    &:checked + .checkbox-html__in {
+      color: $dark;
+      border-color: $primary;
+    }
+  }
+
+  &__in {
+    padding: 9px 20px;
+    background-color: $white;
+    border: 1px solid $white;
+    color: $gray-300;
+    @include ease;
+    width: 100%;
+    gap: 20px !important;
+
+    @include r($breakpoint-2) {
+      padding: 9px 10px;
+      gap: 10px !important;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+  &:hover {
+    .switcher__in {
+      &::before {
+        left: 8px;
+      }
+    }
+
+    input:checked ~ .switcher__in {
+      &::before {
+        left: calc(100% - 26px)
+      }
+    }
+  }
+
+  input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked ~ .switcher__in {
+      background-color: $primary;
+
+      &::before {
+        left: calc(100% - 22px);
+      }
+    }
+  }
+
+  &__in {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    border-radius: 25px;
+    background-color: $gray-300;
+    @include ease-long;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      left: 4px;
+      background-color: $white;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      //transition-delay: 1s;
+      @include ease;
+    }
+  }
+}
+
+.common-radio {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  @include ease;
+
+  &:hover {
+    color: $primary;
+  }
+
+  input {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+
+    &:checked + .common-radio__in {
+      border-color: $primary;
+
+      .common-radio {
+        &__check {
+          border-color: $primary;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__in {
+    padding: 20px;
+    border: 1px solid $gray-300;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    grid-gap: 15px;
+    @include ease-long;
+    height: 100%;
+
+
+    @include r($breakpoint-2) {
+      padding: 15px;
+    }
+  }
+
+  &__check {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid $gray-300;
+    @include ease-long;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 12px;
+      background-color: $primary;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      border-radius: 50%;
+      @include ease-long;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
