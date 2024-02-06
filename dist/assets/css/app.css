@@ -25315,12 +25315,20 @@ button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: 24px;
+  width: calc(100% - 32px);
   max-width: 675px;
   border-radius: 16px;
   padding: 19px 16px;
   background: rgba(40, 43, 64, 0.6);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+}
+
+@media only screen and (max-width: 768px) {
+  .cookies {
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+  }
 }
 
 .cookies__text {
@@ -25336,6 +25344,22 @@ button {
       -ms-flex-align: center;
           align-items: center;
   gap: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .cookies__in {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .cookies__in .button {
+    font-size: 16px;
+  }
 }
 
 html, body {
