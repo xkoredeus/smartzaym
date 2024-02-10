@@ -31,35 +31,21 @@
     }
   }
 }
-
+.swiper-pagination {
+  display: flex;
+  gap: 4px;
+}
 .swiper-pagination.swiper-pagination-bullets {
-  bottom: -30px;
-
-  @include r($breakpoint-3) {
-    bottom: -20px;
-  }
-
+  top: 0;
 }
 .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: $gray-300;
-  opacity: .3;
-
-  @include ease-long;
-
-  &:not(:last-child) {
-    margin-right: 15px;
-
-    @include r($breakpoint-2) {
-      margin-right: 8px;
-    }
-  }
-
-  &-active {
-    opacity: 1;
-  }
+  width: auto;
+  flex-grow: 1;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #E6E6E6;
+  opacity: 1;
+  margin: 0 !important;
 }
 
 .swiper-nav {

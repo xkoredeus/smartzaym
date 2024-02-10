@@ -6,10 +6,11 @@
 
         <form class="popup-call__in spacing-4">
             <div class="form-field__wrapper spacing-4">
-                <div class="form-field">
-                    <input type="text" id="popup-name" class="form-field__input" placeholder=" ">
+                <div class="form-field form-field--error">
+                    <input type="text" id="popup-name" class="form-field__input" placeholder=" " value="Wrong name">
                     <label for="popup-name" class="form-field__label">Имя</label>
                 </div>
+                <span class="form-field__error">Сообщение об ошибке</span>
             </div>
             <div class="form-field__wrapper spacing-3">
                 <div class="form-field">
@@ -18,7 +19,64 @@
                 </div>
             </div>
 
-            <button class="button button-primary w-100">Заказать обратный звонок</button>
+            <button class="button button-primary w-100" data-fancybox data-src="#popup-thanks">Заказать обратный звонок</button>
+        </form>
+        <div class="form-policy color-dark-800 text4 tac">
+            Нажимая на кнопку, я даю <a href="#" class="link-underline">согласие</a> на обработку персональных
+            <br class="d-none d-md-inline"> данных на основании <a href="#" class="link-underline">политики конфиденциальности</a>
+        </div>
+    </div>
+</div>
+<div id="popup-calc" class="popup__wrapper popup__wrapper--common" style="display: none">
+    <div class="popup__in">
+        <div class="title-h3 font-medium spacing-4 tac lh12">Рассчитайте сумму займа по Вашему авто</div>
+
+        <div class="text lh14 spacing-3 tac">Оставьте имя и телефон, и мы перезвоним вам в рабочее время: с 9:00 до 20:30 по Москве.</div>
+
+        <form class="popup-call__in spacing-4">
+            <div class="form-field__wrapper spacing-4">
+                <div class="form-field form-field--error">
+                    <input type="text" id="popup-calc-number" class="form-field__input" placeholder=" " value="00 00 00 0">
+                    <label for="popup-calc-number" class="form-field__label">Госномер</label>
+                </div>
+                <span class="form-field__error">Введите корректный госномер</span>
+            </div>
+            <div class="form-field__wrapper spacing-3">
+                <div class="form-field">
+                    <input type="text" id="popup-calc-tel" class="form-field__input js-tel" placeholder=" ">
+                    <label for="popup-calc-tel" class="form-field__label">Телефон</label>
+                </div>
+            </div>
+
+            <button class="button button-primary w-100" data-fancybox data-src="#popup-thanks">Получить расчет</button>
+        </form>
+        <div class="form-policy color-dark-800 text4 tac">
+            Нажимая на кнопку, я даю <a href="#" class="link-underline">согласие</a> на обработку персональных
+            <br class="d-none d-md-inline"> данных на основании <a href="#" class="link-underline">политики конфиденциальности</a>
+        </div>
+    </div>
+</div>
+<div id="popup-cons" class="popup__wrapper popup__wrapper--common" style="display: none">
+    <div class="popup__in">
+        <div class="title-h3 font-medium spacing-4 tac lh12">Получите консультацию</div>
+
+        <div class="text lh14 spacing-3 tac">Оставьте имя и телефон, и мы перезвоним вам в рабочее время: с 9:00 до 20:30 по Москве.</div>
+
+        <form class="popup-call__in spacing-4">
+            <div class="form-field__wrapper spacing-4">
+                <div class="form-field">
+                    <input type="text" id="#popup-cons-name" class="form-field__input" placeholder=" ">
+                    <label for="#popup-cons-name" class="form-field__label">Имя</label>
+                </div>
+            </div>
+            <div class="form-field__wrapper spacing-3">
+                <div class="form-field">
+                    <input type="text" id="#popup-cons-tel" class="form-field__input js-tel" placeholder=" ">
+                    <label for="#popup-cons-tel" class="form-field__label">Телефон</label>
+                </div>
+            </div>
+
+            <button class="button button-primary w-100" data-fancybox data-src="#popup-thanks">Получить расчет</button>
         </form>
         <div class="form-policy color-dark-800 text4 tac">
             Нажимая на кнопку, я даю <a href="#" class="link-underline">согласие</a> на обработку персональных
@@ -37,6 +95,29 @@
         </div>
     </div>
 </div>
+<div id="popup-expiration" class="popup__wrapper popup__wrapper--common" style="display: none">
+    <div class="popup__in">
+        <div class="title-h3 font-medium spacing-4 tac lh12">Сообщите о просрочке платежа</div>
+
+        <div class="text lh14 spacing-3 tac">Оставьте номер договора, и мы перезвоним вам в&nbsp;рабочее время: с 9:00 до 20:30 по Москве.</div>
+
+        <form class="popup-call__in spacing-4">
+            <div class="form-field__wrapper">
+                <div class="form-field spacing-3">
+                    <input type="text" id="popup-expiration-name" class="form-field__input" placeholder=" ">
+                    <label for="popup-expiration-name" class="form-field__label">Номер договора</label>
+                </div>
+            </div>
+
+            <button class="button button-primary w-100" data-fancybox data-src="#popup-thanks">Сообщить о просрочке</button>
+        </form>
+        <div class="form-policy color-dark-800 text4 tac">
+            Нажимая на кнопку, я даю <a href="#" class="link-underline">согласие</a> на обработку персональных
+            <br class="d-none d-md-inline"> данных на основании <a href="#" class="link-underline">политики конфиденциальности</a>
+        </div>
+    </div>
+</div>
+
 <div id="popup-location" class="popup__wrapper popup__wrapper--sm popup__wrapper--location" style="display: none">
     <div class="popup__in">
         <div class="text font-medium spacing-4">Выберите населенный пункт</div>

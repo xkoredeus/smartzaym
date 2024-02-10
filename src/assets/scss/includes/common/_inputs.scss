@@ -5,13 +5,16 @@ select {
   border: none;
 }
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   text-indent: 1px;
   text-overflow: '';
   color: $dark !important;
   background: $tr !important;
+
+  @include rmin($breakpoint-2) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 }
 option {
   color: $dark;
@@ -19,6 +22,7 @@ option {
 textarea {
   resize: none !important;
   overflow: hidden;
+  outline: none;
 
   &::placeholder {
     color: $dark;
@@ -55,7 +59,8 @@ input[type="number"] {
   position: relative;
   width: 100%;
 
-  &__input {
+  &__input,
+  &__textarea {
     width: 100%;
     @include text3;
     background-color: $white;
@@ -89,14 +94,30 @@ input[type="number"] {
     }
   }
 
+  &--error {
+    .form-field {
+      &__input {
+        border-color: #A92D3C;
+      }
+      &__label {
+        color: #A92D3C;
+      }
+    }
+  }
+  &__error {
+    @include text5;
+    color: #A92D3C;
+  }
+
   &__label {
     position: absolute;
     @include text3;
     color: $dark-600;
     top: 27px;
-    left: 24px;
+    left: 25px;
     @include ease;
     cursor: pointer;
+    background-color: $white;
 
     @include r($breakpoint-2) {
       font-size: 18px;
@@ -209,6 +230,133 @@ input[type="number"] {
     }
     .mdc-slider__value-indicator-container {
       display: none;
+    }
+  }
+}
+/* select2 */
+
+.select__wrapper {
+  font-size: 18px;
+}
+.fancybox-active .select2-container--open .select2-dropdown {
+  z-index: 100100;
+  background-color: $gray-100;
+  border-color: $tr !important;
+}
+
+.select2-dropdown {
+  border: 1px solid $gray-100 !important;
+  background-color: #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  border-bottom-right-radius: $radius2;
+  border-bottom-left-radius: $radius2;
+}
+.select2-container--open {
+  .select2-selection__arrow {
+    transform: scaleY(-1)
+  }
+  .select2-dropdown--below {
+    border: none;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+}
+.select2-container--default {
+  .select2-selection--single {
+    outline: none;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 !important;
+    border-color: $tr;
+    @include ease-long;
+
+    .select2-selection__rendered {
+      color: $dark;
+      margin-right: 40px;
+      padding: 12px 0 14px 14px;
+
+      @include r($breakpoint-2) {
+        padding: 8px 0 10px 12px;
+        margin-right: 44px;
+      }
+    }
+    .select2-selection__arrow {
+      background-image: url('../img/icon-arrow--select.svg');
+      @include ease-long;
+      background-position: 50%;
+      background-size: 21px;
+      background-repeat: no-repeat;
+      top: 50%;
+      right: 20px;
+      margin-top: -15px;
+
+      @include r($breakpoint-2) {
+        right: 12px;
+      }
+
+      b {
+        display: none;
+      }
+    }
+  }
+  &.select2-container--open .select2-selection__arrow {
+    //background-image: url('../img/icon-arrow--select-red.svg');
+  }
+  .select2-results__option {
+    @include ease-long;
+    padding: 0 11px 11px 14px;
+
+    @include r($breakpoint-2) {
+      padding: 0 8px 11px 12px;
+    }
+  }
+  .select2-results__option--highlighted[aria-selected] {
+    color: $purple;
+    background-color: $white;
+  }
+  .select2-results__option[aria-selected=true] {
+    color: $purple-300;
+    background-color: $white;
+  }
+  .select2-results>.select2-results__options {
+    margin-right: 4px;
+    margin-bottom: 5px;
+    &::-webkit-scrollbar {
+      width: 3px;
+
+      &-track {
+        background-color: $tr;
+        //box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        //border-radius: 50px;
+      }
+      &-thumb {
+        background-color: $purple;
+        border-radius: 0;
+      }
+    }
+  }
+
+  &.select2-container--open .select2-dropdown--above {
+    border-bottom-color: transparent !important;
+    bottom: 0;
+  }
+
+  &.select2-container--open.select2-container--above {
+    .select2-selection--single {
+      border-top-color: transparent !important;
+    }
+  }
+
+  &.select2-container--open .select2-dropdown--below {
+    border-top-color: transparent !important;
+    top: 0;
+  }
+
+  &.select2-container--open.select2-container--below {
+    .select2-selection--single {
+      border-bottom-color: transparent !important;
     }
   }
 }

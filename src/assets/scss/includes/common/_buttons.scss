@@ -99,14 +99,17 @@ button {
     background-color: $green;
 
     &:hover {
+      color: $white;
       background-color: $green-100;
     }
 
     &:active {
+      color: $white;
       background-color: $green-200;
     }
 
     &:disabled {
+      color: $white;
       background-color: $green-300;
     }
   }
@@ -128,6 +131,13 @@ button {
 
     &:disabled {
       color: $purple-300;
+    }
+  }
+
+  &--xl {
+    @include rmin($breakpoint-35) {
+      padding-left: 44px;
+      padding-right: 44px;
     }
   }
 

@@ -28,12 +28,21 @@
 }
 @mixin spacing-35 {
   margin-bottom: 25px;
+  @include r($breakpoint-35) {
+    margin-bottom: 24px;
+  }
 }
 @mixin spacing-4 {
   margin-bottom: 16px;
 }
 @mixin spacing-5 {
   margin-bottom: 12px;
+}
+
+.spacing-xs-8 {
+  @include r($breakpoint-35) {
+    margin-bottom: 8px !important;
+  }
 }
 
 .section {
@@ -61,8 +70,8 @@
   }
 
   &--small {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   &__title {

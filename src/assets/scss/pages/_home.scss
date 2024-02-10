@@ -746,6 +746,23 @@
   }
 }
 
+
+.faq-questions {
+
+}
+
+.questions-inner {
+  .title-h5 {
+    @include title-h6;
+  }
+
+  @include r($breakpoint-35) {
+    .title-h5 {
+      font-size: 16px;
+    }
+  }
+}
+
 .question {
   &:not(:last-child) {
     padding-bottom: 24px;
@@ -802,6 +819,18 @@
   padding: 56px;
   border-radius: $radius35;
 
+  &-inner {
+    padding: 40px;
+
+    .banner__wrapper {
+      padding-bottom: 40px;
+    }
+
+    .banner__title {
+      font-size: 32px;
+    }
+  }
+
   @include r($breakpoint-35) {
     padding: 24px;
   }
@@ -841,6 +870,7 @@
   &__button {
     padding-left: 52px;
     padding-right: 52px;
+    white-space: nowrap;
 
     @include r($breakpoint-35) {
       padding-left: 15px;
@@ -913,4 +943,3 @@
     }
   }
 }
-
