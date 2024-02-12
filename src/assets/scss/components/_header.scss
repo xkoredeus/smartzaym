@@ -296,10 +296,16 @@
     position: relative;
     height: 100%;
     width: 100%;
-    padding-top: 8px;
-    padding-bottom: calc(32px + 48px);
-    overflow-y: auto;
-    overflow-x: hidden;
+  }
+
+  &__nav {
+    &-wrapper {
+      height: calc(100% - 96px);
+      padding-top: 8px;
+      //padding-bottom: calc(32px + 48px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
   }
 
   &__messengers {
