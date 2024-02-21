@@ -1,7 +1,36 @@
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 90;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  @include ease;
+
+  &.sticky:not(.active) {
+    transform: translateY(-68px);
+    box-shadow: 0 16px 24px 0 #00000014;
+
+    @include r($breakpoint-2) {
+      transform: translateY(-44px);
+    }
+
+    .header-bottom {
+      height: 64px;
+
+      @include r($breakpoint-2) {
+        height: 60px;
+        border-bottom-color: $tr;
+      }
+    }
+  }
 }
+
+.header-content {
+  position: relative;
+}
+
 .header-top {
   padding-top: 18px;
   padding-bottom: 18px;
@@ -76,8 +105,8 @@
 }
 
 .header-bottom {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  height: 76px;
+  @include ease;
 
   display: flex;
   justify-content: space-between;
@@ -85,8 +114,7 @@
   gap: 15px;
 
   @include r($breakpoint-2) {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    height: 60px;
 
     &__wrapper {
       border-bottom: 1px solid $dark-100;
@@ -281,12 +309,14 @@
 
 .header-menu {
   position: absolute;
-  height: calc(100vh - 115.39px);
+  height: calc(100vh - 105px);
   background-color: $white;
   width: 100%;
   visibility: hidden;
   opacity: 0;
   @include ease;
+  transition-delay: .2s;
+  transition-timing-function: ease-in;
 
   .container {
     height: 100%;
@@ -309,7 +339,7 @@
   }
 
   &__messengers {
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
@@ -317,6 +347,7 @@
     width: 100%;
     background-color: $white;
     z-index: 1;
+    @include ease;
 
     .header-messenger {
       padding: 8px 18px;
@@ -340,5 +371,6 @@
   &.active {
     visibility: visible;
     opacity: 1;
+    //transition-delay: unset;
   }
 }

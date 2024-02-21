@@ -94,9 +94,17 @@ sup {
   }
 }
 
+$header-desktop-height: 145px;
+
 .layout {
   position: relative;
   overflow: hidden;
+
+  padding-top: 145px;
+
+  @include r($breakpoint-2) {
+    padding-top: 105px;
+  }
 }
 
 .list-circle {

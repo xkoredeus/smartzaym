@@ -26293,6 +26293,13 @@ sup {
 .layout {
   position: relative;
   overflow: hidden;
+  padding-top: 145px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .layout {
+    padding-top: 105px;
+  }
 }
 
 .list-circle {
@@ -26376,8 +26383,44 @@ sup {
 }
 
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 90;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.header.sticky:not(.active) {
+  -webkit-transform: translateY(-68px);
+          transform: translateY(-68px);
+  -webkit-box-shadow: 0 16px 24px 0 #00000014;
+          box-shadow: 0 16px 24px 0 #00000014;
+}
+
+@media only screen and (max-width: 1300px) {
+  .header.sticky:not(.active) {
+    -webkit-transform: translateY(-44px);
+            transform: translateY(-44px);
+  }
+}
+
+.header.sticky:not(.active) .header-bottom {
+  height: 64px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .header.sticky:not(.active) .header-bottom {
+    height: 60px;
+    border-bottom-color: transparent;
+  }
+}
+
+.header-content {
+  position: relative;
 }
 
 .header-top {
@@ -26456,8 +26499,9 @@ sup {
 }
 
 .header-bottom {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  height: 76px;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26472,8 +26516,7 @@ sup {
 
 @media only screen and (max-width: 1300px) {
   .header-bottom {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    height: 60px;
   }
   .header-bottom__wrapper {
     border-bottom: 1px solid #EAEAEC;
@@ -26704,13 +26747,17 @@ sup {
 
 .header-menu {
   position: absolute;
-  height: calc(100vh - 115.39px);
+  height: calc(100vh - 105px);
   background-color: #fff;
   width: 100%;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
 }
 
 .header-menu .container {
@@ -26731,7 +26778,7 @@ sup {
 }
 
 .header-menu__messengers {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
@@ -26739,6 +26786,8 @@ sup {
   width: 100%;
   background-color: #fff;
   z-index: 1;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
 }
 
 .header-menu__messengers .header-messenger {
