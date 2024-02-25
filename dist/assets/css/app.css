@@ -26282,8 +26282,8 @@ button:disabled {
 }
 
 .popup__wrapper .fancybox-close-small {
-  top: 16px;
-  right: 16px;
+  top: 12px;
+  right: 12px;
   color: #A9AAB2;
 }
 
@@ -26557,8 +26557,26 @@ button:disabled {
   background-color: #fff;
 }
 
-.popup__wrapper--photo .fancybox-close-small {
-  display: none;
+@media only screen and (max-width: 976px) {
+  .popup__wrapper--photo {
+    max-width: 368px;
+    padding: 24px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .popup__wrapper--photo {
+    max-width: unset;
+    height: 100%;
+    border-radius: unset;
+    padding: 40px 16px 16px;
+  }
+}
+
+@media only screen and (min-width: 976px) {
+  .popup__wrapper--photo .fancybox-close-small {
+    display: none;
+  }
 }
 
 .popup__wrapper--photo .popup-photo__grid {
@@ -26567,10 +26585,35 @@ button:disabled {
   grid-gap: 8px;
 }
 
+@media only screen and (max-width: 976px) {
+  .popup__wrapper--photo .popup-photo__grid {
+    grid-template-columns: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .popup__wrapper--photo .popup-photo__grid {
+    height: 100%;
+  }
+}
+
 .popup__wrapper--photo .popup-photo__info {
   padding: 24px;
   background-color: #F9F9F9;
   border-radius: 16px;
+}
+
+@media only screen and (max-width: 976px) {
+  .popup__wrapper--photo .popup-photo__info {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .popup__wrapper--photo .popup-photo__info {
+    height: 100%;
+  }
 }
 
 .popup__wrapper--photo .popup-photo__main {
@@ -26578,6 +26621,12 @@ button:disabled {
   height: 558px;
   border-radius: 16px;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 976px) {
+  .popup__wrapper--photo .popup-photo__main {
+    display: none;
+  }
 }
 
 .popup__wrapper--photo .popup-photo__picture {
@@ -26671,6 +26720,12 @@ button:disabled {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+@media only screen and (max-width: 976px) {
+  .popup__wrapper--photo .popup-photo__steps {
+    margin-bottom: 24px;
+  }
 }
 
 .popup__wrapper--photo .popup-photo__step {
