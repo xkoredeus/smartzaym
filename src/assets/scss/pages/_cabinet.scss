@@ -626,3 +626,22 @@
 
   }
 }
+
+.credit-info__header {
+  background-color: #E1FBF7;
+  padding: 16px 24px;
+  border-radius: 16px;
+  border: 1px solid #C4F7EF;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+
+  @include r($breakpoint-35) {
+    padding: 12px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
