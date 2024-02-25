@@ -1,0 +1,125 @@
+---
+layout: profile
+---
+<section class="section--small profile">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+                <div class="profile-content profile-card">
+                    <div class="profile-progress__wrapper" style="color: #BFBFC6">
+                        <div class="profile-progress__info">
+                            <span>Вероятность одобрения</span>
+                            <span>0%</span>
+                        </div>
+                        <div class="profile-progress">
+                            <div style="width: 5%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="profile-content__in">
+                        <div class="profile-steps">
+                            <div class="profile-step profile-step--active"></div>
+                            <div class="profile-step"></div>
+                            <div class="profile-step"></div>
+                        </div>
+                        <div class="profile-steps__legend spacing-35">
+                            <div>Шаг 1 из 3</div>
+                            <div>+40% к одобрению</div>
+                        </div>
+
+                        <div class="title-h6 font-medium ls08 lh12 mb-2">Фото документов</div>
+                        <div class="text4 spacing-35">Сделайте фото — мы заполним всю информацию за Вас.</div>
+
+                        <div class="card mb-2 profile-document profile-document--success">
+                            <div class="profile-document__content">
+                                <div class="d-flex align-items-center gap-4 mb-1">
+                                    <div class="font-medium">Паспорт РФ</div>
+                                    <svg width="16" height="16"><use xlink:href="#granted"></use></svg>
+                                </div>
+                                <div class="color-dark-700 text5 mb-2">
+                                    Добавьте фото паспорта,
+                                    чтобы мы могли подтвердить
+                                    Вашу личность
+                                </div>
+
+                                <div class="profile-document__thumbs">
+                                    <div class="document-thumb">
+                                        <button class="button-thumb">
+                                            <svg width="20" height="20">
+                                                <use xlink:href="#thumb-delete"></use>
+                                            </svg>
+                                        </button>
+                                        <img src="{{root}}assets/img/passport-thumb-1.jpg" alt="passport thumb">
+                                    </div>
+                                    <div class="document-thumb">
+                                        <button class="button-thumb">
+                                            <svg width="20" height="20">
+                                                <use xlink:href="#thumb-delete"></use>
+                                            </svg>
+                                        </button>
+                                        <img src="{{root}}assets/img/passport-thumb-2.jpg" alt="passport thumb">
+                                    </div>
+                                    <div class="document-thumb">
+                                        <button class="button-thumb">
+                                            <svg width="20" height="20">
+                                                <use xlink:href="#thumb-delete"></use>
+                                            </svg>
+                                        </button>
+                                        <img src="{{root}}assets/img/passport-thumb-3.jpg" alt="passport thumb">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile-document__actions">
+                                <button class="button button-secondary button--sm button-icon" data-src="#popup-photo-1" data-fancybox>
+                                    <svg width="24" height="24">
+                                        <use xlink:href="#camera"></use>
+                                    </svg>
+                                    <span class="text4">Переснять</span>
+                                </button>
+                                <button class="button button-fourthary button--square">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="#pin"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="card spacing-35 profile-document">
+                            <div class="profile-document__content">
+                                <div class="d-flex align-items-center gap-4 mb-1">
+                                    <div class="font-medium">Документы на авто</div>
+                                </div>
+                                <div class="color-dark-700 text5">
+                                    Добавьте фото документов на авто, чтобы мы могли удостовериться, что этот авто Ваш
+                                </div>
+                            </div>
+
+                            <div class="profile-document__actions">
+                                <button class="button button-secondary button--sm button-icon js-toggle-popup" data-src="#popup-photo-1" data-fancybox>
+                                    <svg width="24" height="24">
+                                        <use xlink:href="#camera"></use>
+                                    </svg>
+                                    <span class="text4">Сделать фото</span>
+                                </button>
+                                <button class="button button-fourthary button--square ">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="#pin"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <a href="profile-2.html" class="button button-primary button--sm spacing-4 w-100">Далее</a>
+
+                        {{> signup-mobile-2 }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

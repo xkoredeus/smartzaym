@@ -1,0 +1,39 @@
+---
+layout: auth
+---
+<section class="welcome">
+    <img class="welcome-picture" src="{{root}}assets/img/welcome.jpg" alt="Смарт Займ — быстро, просто, безопасно">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-1">
+                <section class="section--medium">
+                    <div class="auth-form">
+                        <div class="title-h45 font-medium spacing-4 tac ls08 lh12">Подтвердите номер</div>
+                        <div class="text4 spacing-4 tac lh12">Мы отправили вам SMS с кодом на номер<br> +7 992 564-00-11 </div>
+
+                        <div class="form-field__wrapper mb-2">
+                            <div class="form-field form-field--small form-field--error form-field--bg">
+                                <input type="text" id="signup-code" class="form-field__input font-medium js-mask-code" value="0123" placeholder=" ">
+                                <label for="signup-code" class="form-field__label ">Код из SMS</label>
+                            </div>
+                            <span class="form-field__error">Ошибка</span>
+                        </div>
+
+                        <button class="button-link button-link-nopd size16 font-medium spacing-3">Отправить повторно</button>
+
+                        <button href="signup-4.html" class="button button-primary button--sm w-100 mb-2" disabled>Подтвердить</button>
+                        <a href="signup-1.html" class="button button-link button--sm w-100 spacing-3">Изменить номер</a>
+
+                        {{> signup-mobile }}
+
+                    </div>
+
+                </section>
+            </div>
+
+            {{> auth-welcome }}
+
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,185 @@
+---
+layout: profile
+---
+<span class="snack">Карта успешно привязана</span>
+<section class="section--small profile">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+                <div class="profile-content profile-card">
+                    <div class="profile-progress__wrapper" style="color: #DB9817">
+                        <div class="profile-progress__info">
+                            <span>Вероятность одобрения</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="profile-progress">
+                            <div style="width: 40%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="profile-content__in">
+                        <div class="profile-steps">
+                            <div class="profile-step profile-step--passed"></div>
+                            <div class="profile-step profile-step--active"></div>
+                            <div class="profile-step"></div>
+                        </div>
+                        <div class="profile-steps__legend spacing-35">
+                            <div>Шаг 2 из 3</div>
+                            <div>+30% к одобрению</div>
+                        </div>
+
+                        <div class="title-h6 font-medium ls08 lh12 mb-2">Информация о заемщике</div>
+                        <div class="text4 spacing-1">Добавьте больше информации о себе. Это повысит шансы одобрения займа.</div>
+
+                        <div class="card profile-card-common spacing-1">
+                            <div class="font-medium mb-1">Банковская карта</div>
+                            <div class="text5 color-dark-700 mb-2">Привязка банковской карты позволит быстрее получить деньги на счет.</div>
+
+                            <div class="card-list spacing-4">
+                                <svg width="66" height="40">
+                                    <use xlink:href="#card-1"></use>
+                                </svg>
+                                <svg width="74" height="40">
+                                    <use xlink:href="#card-2"></use>
+                                </svg>
+                                <svg width="59" height="40">
+                                    <use xlink:href="#card-3"></use>
+                                </svg>
+                                <svg width="58" height="40">
+                                    <use xlink:href="#card-4"></use>
+                                </svg>
+                            </div>
+
+                            <button class="button button-primary button--xs button-icon w-100 radius8 gap-8" data-src="#popup-card" data-fancybox>
+                                <svg width="24" height="24">
+                                    <use xlink:href="#card"></use>
+                                </svg>
+                                <span class="size14">Привязать карту</span>
+                            </button>
+                        </div>
+
+                        <div class="card profile-card-common profile-card-common-success spacing-1">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <div class="font-medium mb-1">**** **** **** **22</div>
+                                    <div class="text5 color-dark-700 mb-2">Действительна до: 12/25</div>
+                                </div>
+                                <svg width="67" height="20">
+                                    <use xlink:href="#card-2-1"></use>
+                                </svg>
+                            </div>
+                            <button class="button button-secondary button--xs button-icon w-100 radius8 gap-8" data-src="#popup-card" data-fancybox>
+                                <svg width="24" height="24">
+                                    <use xlink:href="#card"></use>
+                                </svg>
+                                <span class="size14">Привязать другую карту</span>
+                            </button>
+                        </div>
+
+                        <div class="spacing-1">
+                            <div class="text font-medium spacing-4">Регистрация</div>
+                            <div class="form-field__wrapper spacing-4">
+                                <div class="form-field form-field--small form-field--bg">
+                                    <input type="text" id="profile-address" class="form-field__input" placeholder=" ">
+                                    <label for="profile-address" class="form-field__label">Адрес регистрации *</label>
+                                </div>
+                            </div>
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkbox__text">
+                                    <svg><use xlink:href="#check"></use></svg>
+                                    <span>Мой адрес регистрации совпадает с адресом фактического проживания</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="spacing-1">
+                            <div class="text font-medium spacing-4">Трудовая деятельность</div>
+                            <div class="form-field__wrapper spacing-4">
+                                <div class="form-field form-field--small form-field--bg">
+                                    <input type="text" id="profile-org" class="form-field__input" placeholder=" ">
+                                    <label for="profile-org" class="form-field__label">Наименование организации *</label>
+                                </div>
+                            </div>
+                            <div class="form-field__wrapper spacing-4">
+                                <div class="form-field form-field--small form-field--bg">
+                                    <input type="text" id="profile-org-address" class="form-field__input" placeholder=" ">
+                                    <label for="profile-org-address" class="form-field__label">Фактический адрес организации *</label>
+                                </div>
+                            </div>
+                            <div class="form-field__wrapper spacing-4">
+                                <div class="form-field form-field--small form-field--bg">
+                                    <input type="text" id="profile-org-place" class="form-field__input" placeholder=" ">
+                                    <label for="profile-org-place" class="form-field__label">Должность *</label>
+                                </div>
+                            </div>
+
+                            <div class="profile-phone__field-group">
+                                <div class="form-field__wrapper">
+                                    <div class="form-field form-field--small form-field--common-phone form-field--bg">
+                                        <input type="text" id="profile-work-tel" class="form-field__input js-tel" value="9" placeholder="+7">
+                                        <label for="profile-work-tel" class="form-field__label">Рабочий телефон</label>
+                                        <svg class="form-field__flag"><use xlink:href="#rus"></use></svg>
+                                    </div>
+                                </div>
+                                <div class="form-field__wrapper">
+                                    <div class="form-field form-field--small form-field--bg">
+                                        <input type="text" id="profile-work-tel-add" class="form-field__input" placeholder=" ">
+                                        <label for="profile-work-tel-add" class="form-field__label">Доб. </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="spacing-1">
+                            <div class="text font-medium spacing-4">Дополнительная информация</div>
+
+                            <div class="select__wrapper select__wrapper--common spacing-4">
+                                <select id="profile-position-2" class="js-common-select common-select" data-placeholder="Тип занятости *">
+                                    <option></option>
+                                    <option value="1">Трудоустроен</option>
+                                    <option value="2">Не трудоустроен</option>
+                                </select>
+                                <label for="profile-position-2" class="select__wrapper--common__label">Тип занятости *</label>
+                            </div>
+
+                            <div class="form-field__wrapper spacing-4">
+                                <div class="form-field form-field--small form-field--bg">
+                                    <input type="text" id="profile-income" class="form-field__input" placeholder=" ">
+                                    <label for="profile-income" class="form-field__label">Суммарный доход в месяц *</label>
+                                </div>
+                            </div>
+                            <div class="form-field__wrapper spacing-4">
+                                <div class="form-field form-field--small form-field--bg">
+                                    <input type="text" id="profile-payments" class="form-field__input" placeholder=" ">
+                                    <label for="profile-payments" class="form-field__label">Ежемесячный платеж по кредитам *</label>
+                                </div>
+                            </div>
+                            <div class="form-field__wrapper spacing-4">
+                                <div class="form-field form-field--small form-field--common-phone form-field--bg">
+                                    <input type="text" id="profile-add-tel" class="form-field__input js-tel" value="9" placeholder="+7">
+                                    <label for="profile-add-tel" class="form-field__label">Дополнительный телефон</label>
+                                    <svg class="form-field__flag"><use xlink:href="#rus"></use></svg>
+                                </div>
+                            </div>
+                            <div class="form-field__wrapper">
+                                <div class="form-field form-field--small form-field--bg">
+                                    <input type="email" id="profile-email" class="form-field__input" placeholder=" ">
+                                    <label for="profile-email" class="form-field__label">Email *</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="d-flex justify-content-between">
+                            <a href="profile.html" class="button button-fourthary button--sm">Назад</a>
+                            <a href="profile-3.html" class="button button-primary button--sm">Далее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

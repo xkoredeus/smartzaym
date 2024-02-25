@@ -27645,12 +27645,42 @@ $(window).on('load', function () {
                 minimumResultsForSearch: -1,
                 width: '143px'
             });
+
         } else {
             $('js-select').select2('destroy');
             $('js-select-auto-width').select2('destroy');
             $('js-select-year').select2('destroy');
             $('js-select-month').select2('destroy');
         };
+
+        var $selects = $('.js-common-select');
+
+        $selects.each(function(i,el){
+            $(el).select2({
+                language: 'ru',
+                placeholder: function(){
+                    $(this).data('placeholder');
+                },
+                minimumResultsForSearch: -1,
+                width: '100%',
+                dropdownParent: $(el).parents('.select__wrapper--common'),
+            }).on('select2:select', function () {
+                $(this)
+                    .next('.select2').addClass('select2-filled')
+                    .parents('.select__wrapper--common')
+                    .find('.select__wrapper--common__label')
+                    .addClass('active');
+            });
+
+            if ($(el).val()) {
+                $(el)
+                    .next('.select2').addClass('select2-filled')
+                    .parents('.select__wrapper--common')
+                    .find('.select__wrapper--common__label')
+                    .addClass('active');
+            };
+
+        })
     }
 
     function initHeaderSticky() {
@@ -27717,6 +27747,16 @@ $(() => {
             .find('.question-content')
             .slideToggle();
     });
+
+
+    $('.js-toggle-checkbox-group').on('click', function (e) {
+        e.preventDefault();
+        $(this)
+            .toggleClass('active')
+            .parents('.checkbox-group')
+            .find('.checkbox-group__content')
+            .slideToggle();
+    });
 });
 
 
@@ -27755,7 +27795,147 @@ $(() => {
 });
 
 $(() => {
-    $('.js-tel').mask("+7 (999) 999-99-99");
+    $('.js-tel').mask("+7 999 999-99-99");
+    $('.js-mask-code').mask("9999");
+    $('.js-mask-card').mask("9999 9999 9999 9999");
+    $('.js-mask-year').mask("99 / 99");
+    $('.js-mask-cvv').mask("999");
+});
+
+$(() => {
+    $('.js-validate-card').on('click', function () {
+        $(this)
+            .attr('disabled', true)
+            .parents('.popup-call__in')
+            .find('.popup-card__spinner-wrapper')
+            .addClass('active');
+
+        setTimeout(() => {
+            $(this)
+                .attr('disabled', false)
+                .parents('.popup-call__in')
+                .find('.popup-card__spinner-wrapper')
+                .removeClass('active');
+            $.fancybox.close();
+
+
+            setTimeout(() => {
+                $('.snack').addClass('active');
+
+                setTimeout(() => {
+                    $('.snack').removeClass('active');
+                }, [3000])
+            }, [1000])
+        }, 1500)
+    });
+});
+
+$(() => {
+    $('.js-toggle-popover').on('click', function () {
+        $('.popup-photo__popover').toggleClass('active');
+    });
+    $('.js-close-popover').on('click', function () {
+        $('.popup-photo__popover').removeClass('active');
+    });
+
+    $('.js-close-photo-modal').on('click', function () {
+        $.fancybox.close();
+        $('.popup-photo__popover').removeClass('active');
+    });
+
+
+    /// steps
+    $('.js-photo-step-2').on('click', function (){
+        $.fancybox.close();
+        setTimeout(() => {
+            $.fancybox.open({
+                src: '#popup-photo-2',
+                type: 'inline',
+            });
+        }, [900])
+    });
+    $('.js-photo-step-3').on('click', function (){
+        $.fancybox.close();
+        setTimeout(() => {
+            $.fancybox.open({
+                src: '#popup-photo-3',
+                type: 'inline',
+            });
+        }, [900])
+    });
+    $('.js-photo-step-4').on('click', function (){
+        $.fancybox.close();
+        setTimeout(() => {
+            $.fancybox.open({
+                src: '#popup-photo-4',
+                type: 'inline',
+            });
+        }, [900])
+    });
+    $('.js-photo-step-5').on('click', function (){
+        $.fancybox.close();
+        setTimeout(() => {
+            $.fancybox.open({
+                src: '#popup-photo-5',
+                type: 'inline',
+            });
+        }, [900])
+    });
+    $('.js-photo-step-6').on('click', function (){
+        $.fancybox.close();
+        setTimeout(() => {
+            $.fancybox.open({
+                src: '#popup-photo-6',
+                type: 'inline',
+            });
+        }, [900])
+    });
+    $('.js-photo-step-7').on('click', function (){
+        $.fancybox.close();
+        setTimeout(() => {
+            $.fancybox.open({
+                src: '#popup-photo-7',
+                type: 'inline',
+            });
+        }, [900])
+    });
+
+});
+
+$(() => {
+
+    function countdown( elementName, minutes, seconds )
+    {
+        var element, endTime, hours, mins, msLeft, time;
+
+        function twoDigits( n )
+        {
+            return (n <= 9 ? "0" + n : n);
+        }
+
+        function updateTimer()
+        {
+            msLeft = endTime - (+new Date);
+            if ( msLeft < 1000 ) {
+                element.innerHTML = "Время вышло!";
+            } else {
+                time = new Date( msLeft );
+                hours = time.getUTCHours();
+                mins = time.getUTCMinutes();
+                element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+                setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+            }
+        }
+
+        element = document.getElementById( elementName );
+        endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+        updateTimer();
+    }
+
+    if ($('#js-count').parents('html').length > 0) {
+        countdown( "js-count", 10, 0 );
+    }
+
 });
 
 $(() => {

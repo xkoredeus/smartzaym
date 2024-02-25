@@ -1,0 +1,43 @@
+---
+layout: auth
+---
+<section class="welcome">
+    <img class="welcome-picture" src="{{root}}assets/img/welcome.jpg" alt="Смарт Займ — быстро, просто, безопасно">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-1">
+                <section class="section--medium">
+                    <div class="auth-form">
+                        <div class="title-h45 font-medium spacing-4 tac ls08 lh12">Регистрация в личном кабинете</div>
+                        <div class="text4 spacing-4 tac lh12">Зарегистрируйтесь в личном кабинете, чтобы подать заявку на займ без посещения офиса</div>
+
+                        {{> signup-mobile }}
+
+                        <div class="form-field__wrapper spacing-4">
+                            <div class="form-field form-field--phone form-field--bg">
+                                <input type="text" id="signup-tel" class="form-field__input form-field__phone js-tel" placeholder="+7">
+                                <svg class="form-field--phone__flag"><use xlink:href="#rus"></use></svg>
+                            </div>
+                            <div class="form-field__description">Отправим СМС с кодом подтверждения</div>
+                        </div>
+
+                        {{> checkbox-group }}
+
+                        <a href="signup-2.html" class="button button-primary button--sm w-100 spacing-4">Продолжить</a>
+                        <div class="tac">
+                            У вас уже есть личный кабинет?<br class="d-lg-none">
+                            <span class="color-purple">
+                                <a href="signin.html" class="link-underline font-medium">Войти</a>
+                            </span>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            {{> auth-welcome }}
+
+        </div>
+    </div>
+</section>
+

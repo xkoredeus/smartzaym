@@ -1,0 +1,56 @@
+<div class="calc-range">
+    <div class="color-dark-600 mb-2 mb-lg-3">Сумма займа</div>
+    <div class="calc-range__top">
+        <span>0</span>
+        <div class="calc-range__value-wrapper">
+            <input class="calc-range__value js-range-input-from" min="0" max="1000000" value="548 900">
+            <span>₽</span>
+        </div>
+    </div>
+    <div class="form-field-slider d-flex w-100">
+        <span class="js-range-slider mdc-slider">
+            <input class="mdc-slider__input js-range-slider__input-from" type="range" min="0" max="1000000" value="548900" step="10000" name="rangeStart" aria-label="range slider">
+            <span class="mdc-slider__track">
+                <span class="mdc-slider__track--inactive"></span>
+                <span class="mdc-slider__track--active">
+                    <span class="mdc-slider__track--active_fill"></span>
+                </span>
+            </span>
+            <span class="mdc-slider__thumb">
+                <span class="mdc-slider__thumb-knob"></span>
+            </span>
+        </span>
+    </div>
+    <div class="calc-range__legend color-dark-600 spacing-3">
+        <span>0</span>
+        <span>1 000 000 ₽</span>
+    </div>
+
+    <div class="color-dark-600 mb-2 mb-lg-3">Срок займа</div>
+    <div class="calc-range__radio-list d-flex gap-8 spacing-3">
+        <label class="radio">
+            <input type="radio" name="years">
+            <span class="radio__text">
+                <span>1 год</span>
+            </span>
+        </label>
+        <label class="radio">
+            <input type="radio" name="years" checked>
+            <span class="radio__text">
+                <span>2 года</span>
+            </span>
+        </label>
+        <label class="radio">
+            <input type="radio" name="years">
+            <span class="radio__text">
+                <span>3 года</span>
+            </span>
+        </label>
+        <label class="radio">
+            <input type="radio" name="years">
+            <span class="radio__text">
+                <span>4 года</span>
+            </span>
+        </label>
+    </div>
+</div>

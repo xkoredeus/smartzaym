@@ -65,14 +65,14 @@
         <form class="popup-call__in spacing-4">
             <div class="form-field__wrapper spacing-4">
                 <div class="form-field">
-                    <input type="text" id="#popup-cons-name" class="form-field__input" placeholder=" ">
-                    <label for="#popup-cons-name" class="form-field__label">Имя</label>
+                    <input type="text" id="popup-cons-name" class="form-field__input" placeholder=" ">
+                    <label for="popup-cons-name" class="form-field__label">Имя</label>
                 </div>
             </div>
             <div class="form-field__wrapper spacing-3">
                 <div class="form-field">
-                    <input type="text" id="#popup-cons-tel" class="form-field__input js-tel" placeholder=" ">
-                    <label for="#popup-cons-tel" class="form-field__label">Телефон</label>
+                    <input type="text" id="popup-cons-tel" class="form-field__input js-tel" placeholder=" ">
+                    <label for="popup-cons-tel" class="form-field__label">Телефон</label>
                 </div>
             </div>
 
@@ -115,6 +115,110 @@
             Нажимая на кнопку, я даю <a href="#" class="link-underline">согласие</a> на обработку персональных
             <br class="d-none d-md-inline"> данных на основании <a href="#" class="link-underline">политики конфиденциальности</a>
         </div>
+    </div>
+</div>
+
+<div id="popup-card" class="popup__wrapper popup__wrapper--common popup__wrapper--xs" style="display: none">
+    <div class="popup__in popup__in--align-start">
+        <div class="title-h6 font-medium mb-2 lh12">Добавление карты</div>
+
+        <div class="text4 lh12 spacing-3">Для привязки карты мы спишем 1 руб.<br>
+            и сразу же вернём обратно.</div>
+
+        <form class="popup-call__in">
+            <div class="popup-card__fields spacing-35">
+                <div class="popup-card__spinner-wrapper">
+                    <svg class="popup-card__spinner" width="56" height="56">
+                        <use xlink:href="#spinner"></use>
+                    </svg>
+                    <span>Проверяем Вашу карту...</span>
+                </div>
+                <div class="form-field__wrapper spacing-4">
+                    <div class="form-field form-field--small form-field--bg">
+                        <input type="text" id="popup-card-number" class="form-field__input js-mask-card" placeholder=" ">
+                        <label for="popup-card-number" class="form-field__label">Номер карты</label>
+                    </div>
+                </div>
+                <div class="popup-card__fields-row spacing-4">
+                    <div class="form-field__wrapper">
+                        <div class="form-field form-field--small form-field--bg">
+                            <input type="text" id="popup-card-date" class="form-field__input js-mask-year" placeholder=" ">
+                            <label for="popup-card-date" class="form-field__label">MM / YY</label>
+                        </div>
+                    </div>
+                    <div class="form-field__wrapper">
+                        <div class="form-field form-field--small form-field--bg">
+                            <input type="text" id="popup-card-cvv" class="form-field__input js-mask-cvv" placeholder=" ">
+                            <label for="popup-card-cvv" class="form-field__label">CVV</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-field__wrapper">
+                    <div class="form-field form-field--small form-field--bg">
+                        <input type="email" id="popup-card-email" class="form-field__input" placeholder=" ">
+                        <label for="popup-card-email" class="form-field__label">Почта</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="button button-primary button--xs button-icon w-100 radius8 gap-8 spacing-4 js-validate-card">
+                <svg width="24" height="24">
+                    <use xlink:href="#card"></use>
+                </svg>
+                <span class="size14">Добавить карту</span>
+            </button>
+
+            <div class="tac text4 color-dark-700 lh12">
+                Нажимая «Добавить карту», вы соглашаетесь<br>
+                <a href="#" class="link-underline">с условиями оферты</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="popup-request" class="popup__wrapper popup__wrapper--common" style="display: none">
+    <div class="popup__in">
+        <div class="title-h3 font-medium spacing-4 tac lh12">Подать заявку</div>
+
+        <div class="text lh14 spacing-3 tac">Зарегистрируйтесь в личном кабинете, чтобы подать заявку на займ без посещения офиса</div>
+
+        <form class="popup-call__in">
+            <div class="form-field__wrapper spacing-4">
+                <div class="form-field form-field--phone">
+                    <input type="text" id="popup-request-tel" class="form-field__input form-field__phone js-tel" placeholder="+7">
+                    <svg class="form-field--phone__flag"><use xlink:href="#rus"></use></svg>
+                </div>
+            </div>
+
+            {{> checkbox-group }}
+
+            <button class="button button-primary spacing-4 w-100" data-fancybox data-src="#popup-thanks">Выслать SMS</button>
+            <div class="tac">
+                У вас уже есть личный кабинет?<br class="d-lg-none">
+                <span class="color-purple">
+                    <a href="signin.html" class="link-underline font-medium">Войти</a>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="popup-mobile" class="popup__wrapper popup__wrapper--mobile popup__wrapper--common popup__wrapper--xsm" style="display: none">
+    <div class="popup__in">
+        <div class="popup-mobile__in">
+            <div class="title-h45 font-medium spacing-4 tac lh12">Продолжим в мобильной версии?</div>
+
+            <div class="text4 lh14 spacing-3 tac">Для повышения шансов одобрения заявки требуется предоставить фотографии автомобиля с разных ракурсов, что удобно выполнить через мобильное устройство.</div>
+
+            <div class="popup-mobile__buttons">
+                <button class="button button-primary size16 radius8 w-100" data-fancybox data-src="#popup-thanks">Выслать СМС с ссылкой для входа</button>
+                <button class="button button-link size16 w-100 js-close-fancybox" data-fancybox data-src="#popup-thanks">Продолжить с компьютера</button>
+            </div>
+
+            <img class="popup-mobile__picture" src="{{root}}assets/img/mobile-dialog-picture.jpg" alt="Продолжим в мобильной версии?">
+        </div>
+
     </div>
 </div>
 
@@ -194,5 +298,318 @@
             ООО МКК «К2КАПИТАЛ» использует файлы «cookie» с целью персонализации сервисов и повышения удобства пользования веб-сайтом. Если вы не хотите использовать файлы «cookie», пожалуйста, измените настройки вашего браузера.
         </div>
         <button class="button button-thirdary js-set-cookies">Понятно</button>
+    </div>
+</div>
+
+<div id="popup-photo-1" class="popup__wrapper popup__wrapper--photo" style="display: none">
+    <div class="popup-photo__grid">
+        <div class="popup-photo__info">
+            <div class="d-flex flex-column justify-content-between h-100">
+                <div>
+                    <div class="title-h6 font-medium spacing-4 lh12 ls08">Фото документов</div>
+
+                    <div class="popup-photo__steps">
+                        <div class="popup-photo__step">
+                            <span></span>
+                            <div class="font-medium text4 mb-1">Разрешите доступ к камере</div>
+                            <div class="text5 color-dark-700 lh12 mb-2">Перед началом процесса Вам необходимо выдать разрешение на использование Вашей веб-камеры.</div>
+                            <button class="button button-secondary button--sm radius8 size14 js-photo-step-2">Разрешить</button>
+                        </div>
+                        <div class="popup-photo__step">
+                            <span></span>
+                            <div class="font-medium text4 mb-1">Подготовьте документы</div>
+                            <div class="text5 color-dark-700 lh12">На данном шаге Вам понадобится только паспорт гражданина РФ.</div>
+                        </div>
+                        <div class="popup-photo__step">
+                            <span></span>
+                            <div class="font-medium text4 mb-1">Сделайте фотографии</div>
+                            <div class="text5 color-dark-700 lh12">На каждом этапе мы сообщим (и покажем), какие фотографии нужно сделать</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="button button-primary button--sm radius8 size16" disabled>Продолжить</button>
+            </div>
+
+
+        </div>
+        <div class="popup-photo__main">
+            <div class="popup-photo__dummy">
+                <svg class="popup-photo__spinner" width="56" height="56">
+                    <use xlink:href="#spinner"></use>
+                </svg>
+                <span>Ожидаем доступа к камере<br> и местоположению...</span>
+            </div>
+            <div class="popup-photo__close-wrapper">
+                <div class="popup-photo__close-in">
+                    <button class="popup-photo__close js-close-fancybox">
+                        <svg width="40" height="40">
+                            <use xlink:href="#thumb-delete"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup-photo-2" class="popup__wrapper popup__wrapper--photo" style="display: none">
+    <div class="popup-photo__grid">
+        <div class="popup-photo__info">
+            <div class="d-flex flex-column justify-content-between h-100">
+                <div>
+                    <div class="title-h6 font-medium spacing-4 lh12 ls08">Фото документов</div>
+
+                    <div class="popup-photo__steps">
+                        <div class="popup-photo__step">
+                            <span></span>
+                            <div class="font-medium text4 mb-1">Разрешите доступ к камере</div>
+                            <div class="text5 color-dark-700 lh12 mb-2">Перед началом процесса Вам необходимо выдать разрешение на использование Вашей веб-камеры.</div>
+                            <button class="button button-secondary button--sm radius8 size14" disabled>Разрешить</button>
+                        </div>
+                        <div class="popup-photo__step">
+                            <span></span>
+                            <div class="font-medium text4 mb-1">Подготовьте документы</div>
+                            <div class="text5 color-dark-700 lh12">На данном шаге Вам понадобится только паспорт гражданина РФ.</div>
+                        </div>
+                        <div class="popup-photo__step">
+                            <span></span>
+                            <div class="font-medium text4 mb-1">Сделайте фотографии</div>
+                            <div class="text5 color-dark-700 lh12">На каждом этапе мы сообщим (и покажем), какие фотографии нужно сделать</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="button button-primary button--sm radius8 size16 js-photo-step-3">Продолжить</button>
+            </div>
+
+        </div>
+        <div class="popup-photo__main">
+            <img class="popup-photo__picture" src="{{root}}assets/img/popup-photo.jpg" alt="Фото">
+            <div class="popup-photo__close-wrapper">
+                <div class="popup-photo__close-in">
+                    <button class="popup-photo__close js-toggle-popover">
+                        <svg width="40" height="40">
+                            <use xlink:href="#thumb-delete"></use>
+                        </svg>
+                    </button>
+
+                    {{> photo-popover }}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup-photo-3" class="popup__wrapper popup__wrapper--photo" style="display: none">
+    <div class="popup-photo__grid">
+        <div class="popup-photo__info">
+            <div class="d-flex flex-column justify-content-between h-100">
+                <div>
+                    <div class="popup-photo__header spacing-35">
+                        <div class="profile-steps">
+                            <div class="profile-step profile-step--active"></div>
+                            <div class="profile-step"></div>
+                            <div class="profile-step"></div>
+                        </div>
+
+                        <div class="text4">Шаг 1 из 3</div>
+                    </div>
+
+                    <div class="font-medium title-h6 ls08 mb-1 tac">Основной разворот</div>
+                    <div class="text5 color-dark-700 tac">Сделайте фото основного разворота.</div>
+
+                    <div class="popup-photo__preview"></div>
+
+                    <div class="text5 color-dark-700 tac lh12">Убедитесь, что фотография не засвечена<br> и все данные легкочитаемы</div>
+
+                </div>
+                <button class="button button-primary button--sm radius8 size16" disabled>Продолжить</button>
+            </div>
+
+        </div>
+        <div class="popup-photo__main">
+            <img class="popup-photo__picture" src="{{root}}assets/img/popup-photo.jpg" alt="Фото">
+            <div class="popup-photo__close-wrapper">
+                <div class="popup-photo__close-in">
+                    <button class="popup-photo__close js-toggle-popover">
+                        <svg width="40" height="40">
+                            <use xlink:href="#thumb-delete"></use>
+                        </svg>
+                    </button>
+
+                    {{> photo-popover }}
+
+                </div>
+            </div>
+
+            <div class="popup-photo__actions">
+                <button class="button button-primary button--sm size16 button-icon gap-8 js-photo-step-4">
+                    <svg width="24" height="24">
+                        <use xlink:href="#camera"></use>
+                    </svg>
+                    <span class="text4">Сделать фото</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup-photo-4" class="popup__wrapper popup__wrapper--photo" style="display: none">
+    <div class="popup-photo__grid">
+        <div class="popup-photo__info">
+            <div class="d-flex flex-column justify-content-between h-100">
+                <div>
+                    <div class="popup-photo__header spacing-35">
+                        <div class="profile-steps">
+                            <div class="profile-step profile-step--active"></div>
+                            <div class="profile-step"></div>
+                            <div class="profile-step"></div>
+                        </div>
+
+                        <div class="text4">Шаг 1 из 3</div>
+                    </div>
+
+                    <div class="font-medium title-h6 ls08 mb-1 tac">Основной разворот</div>
+                    <div class="text5 color-dark-700 tac">Сделайте фото основного разворота.</div>
+
+                    <div class="popup-photo__preview"></div>
+
+                    <div class="text5 color-dark-700 tac lh12">Убедитесь, что фотография не засвечена<br> и все данные легкочитаемы</div>
+
+                </div>
+                <button class="button button-primary button--sm radius8 size16 js-photo-step-5">Продолжить</button>
+            </div>
+
+        </div>
+        <div class="popup-photo__main">
+            <img class="popup-photo__picture" src="{{root}}assets/img/popup-photo.jpg" alt="Фото">
+            <div class="popup-photo__close-wrapper">
+                <div class="popup-photo__close-in">
+                    <button class="popup-photo__close js-toggle-popover">
+                        <svg width="40" height="40">
+                            <use xlink:href="#thumb-delete"></use>
+                        </svg>
+                    </button>
+
+                    {{> photo-popover }}
+
+                </div>
+            </div>
+
+            <div class="popup-photo__actions">
+                <button class="button button-fourthary button--sm size16 button-icon gap-8 js-photo-step-4">
+                    <span class="text4">Переснять</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup-photo-5" class="popup__wrapper popup__wrapper--photo" style="display: none">
+    <div class="popup-photo__grid">
+        <div class="popup-photo__info">
+            <div class="d-flex flex-column justify-content-between h-100">
+                <div>
+                    <div class="popup-photo__header spacing-35">
+                        <div class="profile-steps">
+                            <div class="profile-step profile-step--passed"></div>
+                            <div class="profile-step profile-step--active"></div>
+                            <div class="profile-step"></div>
+                        </div>
+
+                        <div class="text4">Шаг 2 из 3</div>
+                    </div>
+
+                    <div class="font-medium title-h6 ls08 mb-1 tac">Прописка</div>
+                    <div class="text5 color-dark-700 tac">Сделайте фото основного разворота.</div>
+
+                    <div class="popup-photo__preview"></div>
+
+                    <div class="text5 color-dark-700 tac lh12">Убедитесь, что фотография не засвечена<br> и все данные легкочитаемы</div>
+
+                </div>
+                <div class="popup-photo__nav">
+                    <button class="button button-fourthary button--sm radius8 size16">Назад</button>
+                    <button class="button button-primary button--sm radius8 size16" disabled>Продолжить</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="popup-photo__main">
+            <img class="popup-photo__picture" src="{{root}}assets/img/popup-photo.jpg" alt="Фото">
+            <div class="popup-photo__close-wrapper">
+                <div class="popup-photo__close-in">
+                    <button class="popup-photo__close js-toggle-popover">
+                        <svg width="40" height="40">
+                            <use xlink:href="#thumb-delete"></use>
+                        </svg>
+                    </button>
+
+                    {{> photo-popover }}
+
+                </div>
+            </div>
+
+            <div class="popup-photo__actions">
+                <button class="button button-primary button--sm size16 button-icon gap-8 js-photo-step-6">
+                    <svg width="24" height="24">
+                        <use xlink:href="#camera"></use>
+                    </svg>
+                    <span class="text4">Сделать фото</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup-photo-6" class="popup__wrapper popup__wrapper--photo" style="display: none">
+    <div class="popup-photo__grid">
+        <div class="popup-photo__info">
+            <div class="d-flex flex-column justify-content-between h-100">
+                <div>
+                    <div class="popup-photo__header spacing-35">
+                        <div class="profile-steps">
+                            <div class="profile-step profile-step--passed"></div>
+                            <div class="profile-step profile-step--active"></div>
+                            <div class="profile-step"></div>
+                        </div>
+
+                        <div class="text4">Шаг 2 из 3</div>
+                    </div>
+
+                    <div class="font-medium title-h6 ls08 mb-1 tac">Прописка</div>
+                    <div class="text5 color-dark-700 tac">Сделайте фото основного разворота.</div>
+
+                    <div class="popup-photo__preview"></div>
+
+                    <div class="text5 color-dark-700 tac lh12">Убедитесь, что фотография не засвечена<br> и все данные легкочитаемы</div>
+
+                </div>
+                <div class="popup-photo__nav">
+                    <button class="button button-fourthary button--sm radius8 size16">Назад</button>
+                    <button class="button button-primary button--sm radius8 size16">Продолжить</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="popup-photo__main">
+            <img class="popup-photo__picture" src="{{root}}assets/img/popup-photo.jpg" alt="Фото">
+            <div class="popup-photo__close-wrapper">
+                <div class="popup-photo__close-in">
+                    <button class="popup-photo__close js-toggle-popover">
+                        <svg width="40" height="40">
+                            <use xlink:href="#thumb-delete"></use>
+                        </svg>
+                    </button>
+
+                    {{> photo-popover }}
+
+                </div>
+            </div>
+
+            <div class="popup-photo__actions">
+                <button class="button button-fourthary button--sm size16 button-icon gap-8">
+                    <span class="text4">Переснять</span>
+                </button>
+            </div>
+        </div>
     </div>
 </div>

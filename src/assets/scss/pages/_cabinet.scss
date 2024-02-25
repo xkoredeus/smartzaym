@@ -1,0 +1,628 @@
+.auth-layout {
+  overflow: hidden;
+}
+
+.auth-header {
+  padding-top: 25px;
+  padding-bottom: 5px;
+
+  @include r($breakpoint-35) {
+    padding-top: 16px;
+  }
+
+  &__logo {
+    svg {
+      @include ease;
+      @include r($breakpoint-2) {
+        width: 153px;
+        height: 39px;
+      }
+    }
+
+    &:hover {
+      svg {
+        fill: $purple;
+      }
+    }
+  }
+
+  &__back {
+    width: 64px;
+    height: 64px;
+    @include flex-center;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 0 100px 80px rgba(154, 181, 204, 0.17), 0 39.2305px 33.4221px rgba(154, 181, 204, 0.122205), 0 18.1605px 17.869px rgba(154, 181, 204, 0.101338), 0 8.10485px 10.0172px rgba(154, 181, 204, 0.085), 0 3.00102px 5.32008px rgba(154, 181, 204, 0.0686618), 0 0.644477px 2.21381px rgba(154, 181, 204, 0.0477948);
+
+    @include r($breakpoint-35) {
+      width: 48px;
+      height: 48px;
+    }
+
+    svg {
+      stroke: $dark-700;
+      @include ease;
+
+      @include r($breakpoint-35) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &:hover {
+      svg {
+        stroke: $purple;
+      }
+    }
+  }
+
+  &__in {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include r($breakpoint-35) {
+      gap: 16px;
+    }
+  }
+}
+
+.welcome {
+  position: relative;
+
+  &-picture {
+    position: absolute;
+    top: -94px;
+    left: 50%;
+    height: calc(620px + 94px);
+    width: calc(100% / 2);
+    object-fit: cover;
+
+    @include r($breakpoint-3) {
+      display: none;
+    }
+  }
+
+  &.container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.welcome-description {
+  position: relative;
+  color: $white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  padding-left: 48px;
+
+  &__wrapper {
+    position: relative;
+    height: 620px;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.welcome-substr {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: .8;
+}
+
+
+.auth-form {
+  @include r($breakpoint-3) {
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+.signup-mobile {
+  overflow: hidden;
+  line-height: 1.2;
+  @include font-medium;
+  @include text4;
+  background-color: #f4f4f4;
+  border: 1px solid #E8E8E8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 4px;
+
+  &__title {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+  }
+
+  &-2 {
+    img:nth-child(2) {
+      transform: scale(1.2);
+      transform-origin: top;
+    }
+  }
+}
+
+
+.profile-header {
+  padding-top: 25px;
+  padding-bottom: 5px;
+
+  @include r($breakpoint-35) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__logo {
+    svg {
+      @include ease;
+      @include r($breakpoint-2) {
+        width: 153px;
+        height: 39px;
+      }
+    }
+
+    &:hover {
+      svg {
+        fill: $purple;
+      }
+    }
+  }
+
+  &__in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include r($breakpoint-35) {
+      a:first-child {
+        display: none;
+      }
+
+      .button {
+        width: 52px;
+        height: 52px;
+        @include flex-center;
+        span {
+          display: none;
+        }
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.profile-progress {
+  position: relative;
+  background-color: #F2F2F2;
+  height: 4px;
+  overflow: hidden;
+
+  div {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 16px 9px;
+    text-transform: uppercase;
+
+    span:first-child {
+      color: $dark;
+      @include text6;
+    }
+
+    span:last-child {
+      @include font-medium;
+      color: currentColor;
+      @include text5;
+      @include ease;
+    }
+  }
+}
+
+.profile-layout {
+  overflow: hidden;
+  background-color: #F9F9F9;
+}
+
+.profile {
+  @include r($breakpoint-35) {
+    padding-top: 0;
+  }
+}
+
+.profile-card {
+  background-color: #fff;
+  border-radius: 24px;
+
+  @include r($breakpoint-35) {
+    width: calc(100% + 32px);
+    position: relative;
+    left: -16px;
+  }
+}
+
+.profile-content {
+  &__in {
+    padding: 24px 56px 56px;
+
+    &-pt {
+      padding-top: 32px;
+    }
+
+    @include r($breakpoint-35) {
+      padding: 24px 16px 32px;
+    }
+  }
+}
+
+.profile-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+
+  &__legend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      &:first-child {
+        @include text4;
+      }
+      &:last-child {
+        @include text5;
+        color: $dark-700;
+      }
+    }
+  }
+}
+
+.profile-step {
+  height: 2px;
+  background-color: $dark-200;
+  margin-bottom: 16px;
+
+  &--active {
+    background-color: $purple;
+  }
+  &--passed {
+    background-color: $green;
+  }
+}
+
+.profile-document {
+  background-color: #F9F9F9;
+  border-radius: 8px;
+  border: 2px solid $tr;
+  @include ease;
+  padding: 16px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  gap: 4px;
+
+  @include r($breakpoint-35) {
+    grid-template-columns: auto;
+    gap: 16px;
+  }
+
+  &--success {
+    border-color: $green;
+    background-color: #FBFEFD;
+  }
+
+  &__thumbs {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+
+    @include r($breakpoint-35) {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      justify-content: space-between;
+    }
+
+    .button {
+      gap: 8px;
+    }
+  }
+}
+
+.document-thumb {
+  position: relative;
+  width: 56px;
+  height: 56px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .button-thumb {
+    position: absolute;
+    right: 2px;
+    height: 2px;
+
+    &:hover {
+      opacity: .73;
+    }
+  }
+}
+
+.card-list {
+  display: flex;
+  gap: 8px;
+
+  svg {
+    height: 40px;
+    width: auto;
+  }
+}
+
+.profile-card-common {
+  border-radius: 16px;
+  background-color: #F9F9F9;
+  border: 1px solid $dark-100;
+  padding: 16px;
+
+  &-success {
+    border: 2px solid $green;
+  }
+}
+
+.profile-phone__field-group {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  gap: 16px;
+}
+
+.snack {
+  position: fixed;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  color: $white;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  @include ease;
+
+  background: linear-gradient(0deg, #25BEAC, #25BEAC), #FFFFFF;
+  box-shadow: 8px 16px 60px rgba(37, 190, 172, 0.24);
+  border-radius: 8px;
+  z-index: 2;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.profile-calc-range {
+  .calc-range {
+    padding-right: 0;
+  }
+  .calc-range__top {
+    font-size: 20px;
+    margin-bottom: 13px;
+  }
+  .calc-range__value-wrapper::before {
+    width: 110px;
+  }
+
+  .calc-range__legend {
+    margin-bottom: 16px;
+  }
+  .calc-range__radio-list {
+    margin-bottom: 16px;
+    .radio {
+      flex-grow: 1;
+    }
+
+    .radio__text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.credit-code__fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+
+  @include r($breakpoint-35) {
+    grid-template-columns: 140px 1fr;
+  }
+}
+
+.credit-payment {
+  position: relative;
+  width: 100%;
+
+  input[type='radio'] {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+
+    &:checked + .credit-payment__in {
+      border-color: $purple;
+      .credit-payment__header span:first-child {
+        border-color: #C5A9DB;
+        &::before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__in {
+    padding: 16px;
+    border: 2px solid #D4D5D9;
+    border-radius: 16px;
+    display: block;
+    @include ease;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: 22px 1fr auto;
+    grid-gap: 16px;
+    align-items: flex-start;
+    cursor: pointer;
+
+    & > span:first-child {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      border: 2px solid $dark-500;
+      border-radius: 50%;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        background-color: $purple;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        visibility: hidden;
+        @include ease;
+      }
+    }
+
+    & > span:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__info {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid $dark-200;
+  }
+
+  &__banks {
+    max-height: 210px;
+    overflow-y: auto;
+    margin-top: 16px;
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: $tr;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 4px;
+      height: 10px;
+      background: $dark-300;
+      border-radius: 16px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+}
+
+.form-field_new--search {
+  &__input {
+    position: relative;
+    background-color: $dark-30;
+    padding: 12px 12px 12px 36px;
+  }
+
+  &__icon {
+    stroke: $dark-500;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+.credit-info {
+  padding: 16px;
+  background-color: #F9F9F9;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  letter-spacing: -1%;
+
+  &__row {
+    display: flex;
+    width: 100%;
+    gap: 3px;
+
+    div {
+      white-space: nowrap;
+      &:first-child {
+        color: #505F6F;
+      }
+      &:nth-child(2) {
+        height: 1px;
+        width: 100%;
+        flex-grow: 1;
+        align-self: flex-end;
+        border-bottom: 1px dashed $dark-400;
+        transform: translateY(-5px);
+      }
+      &:last-child {
+        @include font-medium;
+      }
+    }
+
+  }
+}
