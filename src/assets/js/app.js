@@ -284,6 +284,13 @@ $(() => {
     });
 });
 
+var fancyOpts = {
+    animationDuration: 600,
+    animationEffect: 'slide-in-in',
+    touch: false,
+    scrolling: true,
+}
+
 $(() => {
     $('.js-toggle-popover').on('click', function () {
         $('.popup-photo__popover').toggleClass('active');
@@ -296,6 +303,36 @@ $(() => {
         $.fancybox.close();
         $('.popup-photo__popover').removeClass('active');
     });
+
+    $('.js-toggle-popup-photo').on('click', function () {
+        var src;
+
+        if ($(window).width() < 1300) {
+            src = '#popup-mobile-photo-2'
+        } else {
+            src = '#popup-photo-1'
+        }
+
+        $.fancybox.open({
+            src: src,
+            type: 'inline',
+            opts: fancyOpts,
+        });
+    });
+
+    $('.js-toggle-instruction').on('click', function () {
+        $.fancybox.open({
+            src: '#popup-mobile-photo-info',
+            type: 'inline',
+            opts: {
+                animationDuration: 600,
+                animationEffect: 'slide-in-in',
+                touch: false,
+                scrolling: true,
+                baseClass: "popup__wrapper--info-container",
+            },
+        });
+    })
 
 
     /// steps
@@ -355,6 +392,22 @@ $(() => {
     });
 
 });
+
+$(() => {
+    $('.popup__wrapper-prevent-close').on('click', '.fancybox-close-small', function (e){
+        e.stopPropagation();
+
+        $.fancybox.open({
+            src: '#popup-mobile-photo-cancel',
+            type: 'inline',
+            opts: fancyOpts,
+        });
+    });
+
+    $('.js-close-photo-cancel').on('click', function (){
+        $.fancybox.close(true);
+    });
+})
 
 $(() => {
 
@@ -442,12 +495,7 @@ $(() => {
 });
 
 $(() => {
-    $('[data-fancybox]').fancybox({
-        animationDuration: 600,
-        animationEffect: 'slide-in-in',
-        touch: false,
-        scrolling: true,
-    });
+    $('[data-fancybox]').fancybox(fancyOpts);
 
     $('.js-close-fancybox').on('click', function () {
         $.fancybox.close();

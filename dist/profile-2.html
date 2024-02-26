@@ -786,8 +786,6 @@
                         </div>
                         <button class="button button-primary button--sm radius8 size16" disabled>Продолжить</button>
                     </div>
-        
-        
                 </div>
                 <div class="popup-photo__main">
                     <div class="popup-photo__dummy">
@@ -1113,6 +1111,138 @@
                         </button>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        
+        <!--mobile flow-->
+        <div id="popup-mobile-photo-1" class="popup__wrapper popup__wrapper--photo" style="display: none">
+            <div class="popup-photo__grid">
+                <div class="popup-photo__info">
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <div>
+                            <div class="title-h6 font-medium spacing-4 lh12 ls08">Фото документов</div>
+        
+                            <div class="popup-photo__steps">
+                                <div class="popup-photo__step">
+                                    <span></span>
+                                    <div class="font-medium text4 mb-1">Разрешите доступ к камере</div>
+                                    <div class="text5 color-dark-700 lh12 mb-2">Перед началом процесса Вам необходимо выдать разрешение на использование Вашей веб-камеры.</div>
+                                    <button class="button button-secondary button--sm radius8 size14 js-photo-step-2">Разрешить</button>
+                                </div>
+                                <div class="popup-photo__step">
+                                    <span></span>
+                                    <div class="font-medium text4 mb-1">Подготовьте документы</div>
+                                    <div class="text5 color-dark-700 lh12">На данном шаге Вам понадобится только паспорт гражданина РФ.</div>
+                                </div>
+                                <div class="popup-photo__step">
+                                    <span></span>
+                                    <div class="font-medium text4 mb-1">Сделайте фотографии</div>
+                                    <div class="text5 color-dark-700 lh12">На каждом этапе мы сообщим (и покажем), какие фотографии нужно сделать</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button button-primary button--sm radius8 size16" data-fancybox data-src="#popup-mobile-photo-2">Продолжить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-mobile-photo-2" class="popup__wrapper popup__wrapper--mobile-photo" style="display: none; background-image: url('assets/img/passport.jpg');">
+            <div class="mobile-photo__in mobile-photo__in--active">
+                <div class="mobile-photo__content">
+                    <div class="mobile-photo__top">
+                        <div class="font-medium size24 ls08 mb-1">Основной разворот</div>
+                        <div class="text5 mb-2">Сделайте фото основного разворота.</div>
+        
+                        <div class="popup-photo__header">
+                            <div class="profile-steps">
+                                <div class="profile-step profile-step--active"></div>
+                                <div class="profile-step"></div>
+                                <div class="profile-step"></div>
+                            </div>
+        
+                            <div class="text4">Шаг 1 из 3</div>
+                        </div>
+                    </div>
+        
+                    <div class="mobile-photo__frame-wrapper">
+                        <div class="mobile-photo__frame">
+                            <svg width="56" height="56"><use xlink:href="#frame-border"></use></svg>
+                            <svg width="56" height="56"><use xlink:href="#frame-border"></use></svg>
+                            <svg width="56" height="56"><use xlink:href="#frame-border"></use></svg>
+                            <svg width="56" height="56"><use xlink:href="#frame-border"></use></svg>
+                        </div>
+                    </div>
+        
+                    <div class="mobile-photo__actions">
+                        <button class="font-medium button--sm button-link size16 color-white js-toggle-instruction">Инструкция</button>
+        
+                        <button data-src="#popup-mobile-photo-3" data-fancybox>
+                            <svg width="64" height="64">
+                                <use xlink:href="#camera-action"></use>
+                            </svg>
+                        </button>
+        
+                        <button>
+                            <svg width="40" height="40">
+                                <use xlink:href="#camera-rotation"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-mobile-photo-3" class="popup__wrapper popup__wrapper--mobile-photo popup__wrapper-prevent-close" style="display: none;">
+            <div class="mobile-photo__in">
+                <div class="fancybox-close-small">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+                    </svg>
+                </div>
+                <div class="mobile-photo__content">
+                    <div class="mobile-photo__top">
+                        <div class="font-medium size24 ls08 mb-1">Основной разворот</div>
+                        <div class="text5 mb-2">Сделайте фото основного разворота.</div>
+        
+                        <div class="popup-photo__header">
+                            <div class="profile-steps">
+                                <div class="profile-step profile-step--active"></div>
+                                <div class="profile-step"></div>
+                                <div class="profile-step"></div>
+                            </div>
+        
+                            <div class="text4">Шаг 1 из 3</div>
+                        </div>
+                    </div>
+        
+                    <div class="mobile-photo-result__picture" style="background-image: url('assets/img/passport.jpg');"></div>
+        
+                    <div class="mobile-photo-result__actions">
+                        <button class="button button-fourthary button--sm radius8 size16">Переснять</button>
+                        <button class="button button-primary button--sm radius8 size16">Продолжить</button>
+                        <button class="button-link button-sm size16 font-medium">К предыдщуему шагу</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-mobile-photo-cancel" class="popup__wrapper popup__wrapper--cancel" style="display: none;">
+            <div class="popup-cancel">
+                <div class="popup-cancel__in spacing-4">
+                    <div class="font-medium size24 ls08 mb-1">Прервать заполнение?</div>
+                    <div class="text4">Все фотографии, которые Вы сделали ранее не будут сохранены.</div>
+                </div>
+                <div class="popup-cancel__actions">
+                    <button class="button button-fourthary button--sm radius8 size16 js-close-photo-cancel">Прервать</button>
+                    <button class="button button-primary button--sm radius8 size16 js-close-fancybox">Продолжить</button>
+                </div>
+            </div>
+        </div>
+        <div id="popup-mobile-photo-info" class="popup__wrapper popup__wrapper--info" style="display: none;">
+            <div class="popup-info tac">
+                <div class="font-medium size24 ls08 mb-1">Основной разворот</div>
+                <div class="text5 color-dark-700 spacing-4">Сделайте фото основного разворота.</div>
+                <div class="popup-info__sample spacing-4"></div>
+                <div class="text5 lh12 color-dark-700">Убедитесь, что фотография не засвечена и все данные легкочитаемы</div>
             </div>
         </div>
 
@@ -1931,6 +2061,20 @@
                     <rect width="24" height="24" fill="white"/>
                 </clipPath>
             </defs>
+        </symbol>
+    
+        <symbol id="frame-border" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="4" height="56" fill="white"/>
+            <rect x="56" width="4" height="56" transform="rotate(90 56 0)" fill="white"/>
+        </symbol>
+        <symbol id="camera-action" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="31.9987" cy="32.0006" r="26.6667" fill="white"/>
+            <circle cx="32" cy="32" r="31.5" stroke="white"/>
+        </symbol>
+    
+        <symbol id="camera-rotation" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle opacity="0.1" cx="20" cy="20" r="20" fill="white"/>
+            <path d="M12 12V17H12.5815M27.9381 19C27.446 15.0537 24.0796 12 20 12C16.6426 12 13.7683 14.0682 12.5815 17M12.5815 17H17M28 28V23H27.4185M27.4185 23C26.2317 25.9318 23.3574 28 20 28C15.9204 28 12.554 24.9463 12.0619 21M27.4185 23H23" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
     
     
