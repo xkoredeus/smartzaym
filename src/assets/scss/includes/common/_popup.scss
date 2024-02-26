@@ -617,6 +617,11 @@
       height: 360px;
       background-color: #D9D9D9;
       border-radius: 8px;
+
+      @include r($breakpoint-35) {
+        width: 220px;
+        height: 220px;
+      }
     }
   }
 }

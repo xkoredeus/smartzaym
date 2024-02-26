@@ -26997,6 +26997,13 @@ button:disabled {
   border-radius: 8px;
 }
 
+@media only screen and (max-width: 768px) {
+  .popup__wrapper--info .popup-info__sample {
+    width: 220px;
+    height: 220px;
+  }
+}
+
 .popup__wrapper--cancel {
   padding: 8px;
   max-width: 328px;

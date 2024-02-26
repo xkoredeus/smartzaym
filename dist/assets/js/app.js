@@ -27939,8 +27939,6 @@ $(() => {
 
 });
 
-console.log($('.popup__wrapper-prevent-close'));
-
 $(() => {
     $('.popup__wrapper-prevent-close').on('click', '.fancybox-close-small', function (e){
         e.stopPropagation();
