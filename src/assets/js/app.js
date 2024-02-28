@@ -71,9 +71,13 @@ $(window).on('load', function () {
         if ($(window).width() < 1300) {
             $('.header-nav').appendTo('.header-menu__nav');
             $('.header-messenger__list').appendTo('.header-menu__messengers');
+
+            $('.profile-header__tel').appendTo('.profile-header__menu-in');
         } else {
             $('.header-nav').appendTo('.header-nav__wrapper');
             $('.header-messenger__list').appendTo('.header-messenger__wrapper');
+
+            $('.profile-header__tel').appendTo('.profile-header__tel-wrapper');
         }
     }
 
@@ -183,12 +187,33 @@ $(() => {
         }
     });
 
+    $('.js-profile-menu-toggle').on('click', function () {
+        $(this)
+            .toggleClass('active')
+            .parents('.profile-header')
+            .toggleClass('active')
+            .parents('body')
+            .toggleClass('is-loading')
+    });
+
     $('.js-toggle-dropdown').on('click', function () {
         if ($(window).width() < 1300) {
             $(this)
                 .toggleClass('active')
                 .next('.header-nav__dropdown')
                 .slideToggle();
+        }
+    });
+
+    $('.is-loading').on('click', '.profile-layout__in', function (){
+        if ($('.profile-header').hasClass('active')) {
+            $('.is-loading')
+                .removeClass('is-loading')
+                .find('.profile-header')
+                .removeClass('active')
+                .find('.js-profile-menu-toggle')
+                .removeClass('active')
+
         }
     });
 })

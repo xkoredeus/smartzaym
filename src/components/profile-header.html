@@ -2,7 +2,7 @@
     <div class="container">
         <div class="profile-header__in">
             <div class="d-flex align-items-center">
-                <button class="burger js-menu-toggle">
+                <button class="burger js-profile-menu-toggle">
                     <svg><use xlink:href="#burger"></use></svg>
                     <svg><use xlink:href="#cross-1"></use></svg>
                 </button>
@@ -15,7 +15,13 @@
 
 
             <div class="profile-header__info">
-                <a href="tel:79925640011" class="text4 font-medium">+7 992 564-00-11</a>
+                <div class="profile-header__tel-wrapper">
+                    <div class="profile-header__tel">
+                        <a href="tel:79925640011" class="text4 font-medium">+7 992 564-00-11</a>
+                        <div class="text5 color-dark-700">Номер подтвержден</div>
+                    </div>
+
+                </div>
 
                 <a class="button button-secondary button--sm button-icon">
                     <span>Выйти</span>
@@ -24,6 +30,11 @@
                     </svg>
                 </a>
             </div>
+        </div>
+    </div>
+    <div class="profile-header__menu">
+        <div class="container">
+            <div class="profile-header__menu-in"></div>
         </div>
     </div>
 </header>
