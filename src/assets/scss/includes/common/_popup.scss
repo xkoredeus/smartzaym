@@ -473,7 +473,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 82px;
+      gap: 8%;
       height: 100%;
 
       @include r($breakpoint-35) {
@@ -490,22 +490,21 @@
       flex-grow: 1;
       position: relative;
       border: 1px solid $white;
-      height: 0;
-      max-width: 532px;
       width: 100%;
-      padding-top: 114.36364%;
+      height: 100%;
       overflow: hidden;
-
-      @include r($breakpoint-35) {
-        padding-top: 124.36364%;
-      }
 
       &-wrapper {
         position: relative;
         align-self: center;
         width: 100%;
+        height: calc(100% - 99px - 69px - 16%);
         max-width: 532px;
         box-shadow: 0 0 0 1715px rgba(40, 43, 64, 0.8);
+
+        @include r($breakpoint-35) {
+          height: calc(100% - 99px - 69px - 32px);
+        }
       }
 
       svg {
@@ -543,7 +542,7 @@
       padding-bottom: 5px;
 
       @include r($breakpoint-35) {
-        margin-top: 42px;
+        margin-top: 32px;
         gap: 10px;
       }
 
