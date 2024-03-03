@@ -236,6 +236,28 @@ $(() => {
             .find('.checkbox-group__content')
             .slideToggle();
     });
+
+    $('.js-set-checked-checkbox-group').on('change', function (e) {
+        if (e.currentTarget.checked) {
+            const checkboxes = $(this)
+                .parents('.checkbox-group')
+                .find('.js-checkbox-group-list').children();
+
+            checkboxes.each(function(i,el){
+                $(el).find('input').attr('checked', true);
+            });
+        }
+    });
+
+    $('.js-checkbox-group-list').on('change', 'input', function (e) {
+        if (!e.currentTarget.checked) {
+            const checkboxParent = $(this).parents('.checkbox-group').find('.checkbox-group__top').find('input')[0];
+            console.log(checkboxParent, checkboxParent.checked);
+            if (checkboxParent.checked) {
+                checkboxParent.checked = false;
+            }
+        }
+    })
 });
 
 
