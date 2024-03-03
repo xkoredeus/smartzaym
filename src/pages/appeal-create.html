@@ -1,0 +1,132 @@
+---
+layout: cabinet
+---
+<div class="row">
+    <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+        <div class="spacing-4">
+            <a href="appeals.html" class="button button-icon link-purple size16 p-0">
+                <svg width="24" height="24">
+                    <use xlink:href="#arrow-right-3"></use>
+                </svg>
+                <span>Вернуться ко всем обращениям</span>
+            </a>
+        </div>
+        <div class="title-h45 font-medium ls08 spacing-4">Новое обращение</div>
+
+        <div class="leaf ls10">
+            <div class="text font-medium spacing-4">1. Выберите тип обращения</div>
+
+            <div class="spacing-35">
+                <label class="credit-payment mb-2">
+                    <input type="radio" checked>
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="font-medium mb-1">Финансовое обращения</span>
+                                <span class="text5 color-dark-700">Позволяет сформировать и отправить заявление на возврат излишне перечисленных денежных средств.</span>
+                            </span>
+                        </span>
+                    </span>
+                </label>
+                <label class="credit-payment mb-2">
+                    <input type="radio">
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="font-medium mb-1">Официальное уведомление</span>
+                                <span class="text5 color-dark-700">Позволяет сформировать и отправить уведомление об инициировании процедуры банкротства.</span>
+                            </span>
+                        </span>
+                    </span>
+                </label>
+                <label class="credit-payment mb-2">
+                    <input type="radio">
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="font-medium mb-1">Справки и документы</span>
+                                <span class="text5 color-dark-700">Позволяет сформировать и отправить запрос на получение справки об отсутствии задолженности.</span>
+                            </span>
+                        </span>
+                    </span>
+                </label>
+                <label class="credit-payment">
+                    <input type="radio">
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="font-medium mb-1">Жалоба</span>
+                                <span class="text5 color-dark-700">Позволяет составить письмо в компанию в свободной форме.</span>
+                            </span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="spacing-35">
+                <div class="text font-medium mb-2">2. Укажите номер договора</div>
+                <div class="color-gray-hz spacing-4 text4">Укажите номер договора в том случае, если Ваше обращение привязано
+                    к конкретному займу.</div>
+
+
+                <div class="form-field__wrapper">
+                    <div class="form-field form-field--small form-field--bg">
+                        <input type="text" id="appeal-number" class="form-field__input font-medium" placeholder=" ">
+                        <label for="appeal-number" class="form-field__label">Укажите номер договора</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacing-35">
+                <div class="text font-medium mb-2">3. Добавьте описание</div>
+                <div class="color-gray-hz spacing-4 text4">Уточните детали жалобы в произвольной форме, если требуется.</div>
+
+
+                <div class="form-field__wrapper spacing-4">
+                    <div class="form-field form-field--small form-field--bg">
+                        <textarea id="appeal-description" class="form-field__textarea font-medium" rows="4" placeholder=" "></textarea>
+                        <label for="appeal-description" class="form-field__label">Описание обращения</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacing-35">
+                <div class="text font-medium mb-2">3. Прикрепите документы</div>
+
+                <div class="card spacing-35 profile-document">
+                    <div class="profile-document__content">
+                        <div class="d-flex align-items-center gap-4 mb-1">
+                            <div class="font-medium">Документы</div>
+                        </div>
+                        <div class="color-dark-700 text5">
+                            Документы и скриншоты, которые помогут
+                            в обработке обращения
+                        </div>
+                    </div>
+
+                    <div class="profile-document__actions">
+                        <button class="button button-secondary button--sm button-icon">
+                            <svg width="24" height="24">
+                                <use xlink:href="#camera"></use>
+                            </svg>
+                            <span class="text4">Сделать фото</span>
+                        </button>
+                        <button class="button button-fourthary button--square">
+                            <svg width="24" height="24">
+                                <use xlink:href="#pin"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+                <a href="appeal-create-success.html" class="button button--sm button-primary size16 radius8 w-100">Подать обращение</a>
+            </div>
+
+        </div>
+    </div>
+</div>

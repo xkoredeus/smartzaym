@@ -1,0 +1,67 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{!— Required meta tags --}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#CB3958">
+    <link rel="shortcut icon" href="{{root}}assets/img/favicon.ico" type="image/x-icon">
+
+    <title>New Project</title>
+
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+</head>
+
+<body class="is-loading">
+
+    {{> preloader}}
+
+    <div class="cabinet-layout">
+
+        {{> cabinet-header }}
+
+        <main role="main" class="cabinet-layout__in">
+            <div class="cabinet-nav">
+                <a href="#" class="cabinet-nav__link">
+                    <svg width="24" height="24">
+                        <use xlink:href="#terminal"></use>
+                    </svg>
+                    <span>Мои займы</span>
+                </a>
+                <a href="#" class="cabinet-nav__link cabinet-nav__link--active">
+                    <svg width="24" height="24">
+                        <use xlink:href="#clipboard"></use>
+                    </svg>
+                    <span>Мои обращения</span>
+                </a>
+                <a href="#" class="cabinet-nav__link">
+                    <svg width="24" height="24">
+                        <use xlink:href="#revert"></use>
+                    </svg>
+                    <span>История</span>
+                </a>
+            </div>
+            <div class="cabinet-content">
+                <div class="container">
+
+                    {{> body }}
+
+                </div>
+            </div>
+
+        </main>
+
+        {{> footer }}
+
+        {{> popups }}
+
+    </div>
+
+    {{> svg}}
+
+    <script src="{{root}}assets/js/app.js"></script>
+</body>
+</html>

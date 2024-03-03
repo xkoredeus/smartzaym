@@ -164,45 +164,6 @@
 
 }
 
-.checkbox-html {
-  width: 100%;
-  cursor: pointer;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-
-  input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-    visibility: hidden;
-
-    &:checked + .checkbox-html__in {
-      color: $dark;
-      border-color: $primary;
-    }
-  }
-
-  &__in {
-    padding: 9px 20px;
-    background-color: $white;
-    border: 1px solid $white;
-    color: $gray-300;
-    @include ease;
-    width: 100%;
-    gap: 20px !important;
-
-    @include r($breakpoint-2) {
-      padding: 9px 10px;
-      gap: 10px !important;
-    }
-
-    &:hover {
-      color: $primary;
-    }
-  }
-}
-
 .switcher {
   display: flex;
   align-items: center;
@@ -286,7 +247,7 @@
 
       .common-radio {
         &__check {
-          border-color: $purple;
+          border-color: #C7ABDD;
 
           &::before {
             opacity: 1;

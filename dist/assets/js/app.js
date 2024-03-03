@@ -28096,6 +28096,12 @@ $(() => {
 });
 
 $(() => {
+    if ($('.mdc-tooltip-1').parents('html').length > 0) {
+        const tooltip1 = new mdc.tooltip.MDCTooltip(document.querySelector('.mdc-tooltip-1'));
+    }
+});
+
+$(() => {
     $(".js-set-cookies").on('click', function() {
         localStorage.setItem('ZaymCookies', true);
         $('.cookies').hide();
