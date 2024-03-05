@@ -30965,6 +30965,11 @@ sup {
   }
 }
 
+.cabinet-header__container {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
 .cabinet-header.active {
   background-color: #FAFAFA;
 }
@@ -31309,13 +31314,25 @@ sup {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  border-bottom: 1px dashed currentColor;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(26%, #A9AAB2), color-stop(0%, rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, #A9AAB2 26%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 5px 1px;
+  background-repeat: repeat-x;
   margin-bottom: 6px;
 }
 
 .info__row div:last-child {
   font-family: "TTFirsNeue-Medium";
   color: #282B40;
+}
+
+.bg-grey {
+  background-color: #F9F9F9;
+}
+
+.radius16 {
+  border-radius: 16px;
 }
 
 .appeal-decision {
@@ -31333,6 +31350,7 @@ sup {
           align-items: center;
   border: 1px solid #EAEAEC;
   border-radius: 8px;
+  background-color: #fff;
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
 }

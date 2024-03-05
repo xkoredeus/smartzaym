@@ -27882,6 +27882,10 @@ var fancyOpts = {
     animationEffect: 'slide-in-in',
     touch: false,
     scrolling: true,
+    clickOutside: false,
+    helpers : {
+        overlay : {closeClick: false}
+    },
 }
 
 $(() => {
@@ -27897,6 +27901,14 @@ $(() => {
         $('.popup-photo__popover').removeClass('active');
     });
 
+
+
+    const options = {
+        ...fancyOpts,
+        clickSlide: false,
+        clickOutside: false,
+    }
+
     $('.js-toggle-popup-photo').on('click', function () {
         var src;
 
@@ -27909,7 +27921,7 @@ $(() => {
         $.fancybox.open({
             src: src,
             type: 'inline',
-            opts: fancyOpts,
+            opts: options,
         });
     });
 
@@ -27935,6 +27947,7 @@ $(() => {
             $.fancybox.open({
                 src: '#popup-photo-2',
                 type: 'inline',
+                opts: options,
             });
         }, [900])
     });
@@ -27944,6 +27957,7 @@ $(() => {
             $.fancybox.open({
                 src: '#popup-photo-3',
                 type: 'inline',
+                opts: options,
             });
         }, [900])
     });
@@ -27953,6 +27967,7 @@ $(() => {
             $.fancybox.open({
                 src: '#popup-photo-4',
                 type: 'inline',
+                opts: options,
             });
         }, [900])
     });
@@ -27962,6 +27977,7 @@ $(() => {
             $.fancybox.open({
                 src: '#popup-photo-5',
                 type: 'inline',
+                opts: options,
             });
         }, [900])
     });
@@ -27971,6 +27987,7 @@ $(() => {
             $.fancybox.open({
                 src: '#popup-photo-6',
                 type: 'inline',
+                opts: options,
             });
         }, [900])
     });
@@ -27980,6 +27997,7 @@ $(() => {
             $.fancybox.open({
                 src: '#popup-photo-7',
                 type: 'inline',
+                opts: options,
             });
         }, [900])
     });

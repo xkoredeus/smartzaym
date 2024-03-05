@@ -767,6 +767,11 @@
     padding-bottom: 14px;
   }
 
+  &__container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
   &.active {
     background-color: #FAFAFA;
 
@@ -1031,7 +1036,10 @@
         height: 1px;
         display: block;
         flex-grow: 1;
-        border-bottom: 1px dashed currentColor;
+        background-image: linear-gradient(to right, $dark-400 26%, rgba(255,255,255,0) 0%);
+        background-position: bottom;
+        background-size: 5px 1px;
+        background-repeat: repeat-x;
         margin-bottom: 6px;
       }
     }
@@ -1040,6 +1048,14 @@
       color: $dark;
     }
   }
+}
+
+.bg-grey {
+  background-color: #F9F9F9;
+}
+
+.radius16 {
+  border-radius: 16px;
 }
 
 .appeal-decision {
@@ -1055,6 +1071,7 @@
   align-items: center;
   border: 1px solid #EAEAEC;
   border-radius: 8px;
+  background-color: $white;
   @include ease;
   &:hover {
     border-color: #7AD8CC;
