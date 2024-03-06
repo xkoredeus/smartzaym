@@ -743,3 +743,266 @@
         <div class="text5 lh12 color-dark-700">Убедитесь, что фотография не засвечена и все данные легкочитаемы</div>
     </div>
 </div>
+
+<div id="popup-payment" class="popup__wrapper popup__wrapper--common popup__wrapper--sm" style="display: none">
+    <div class="popup__in popup__in--align-start">
+        <div class="font-medium mb-2 lh12">Сумма текущей задолженности</div>
+
+        <div class="amount-wrapper spacing-35">
+            <input type="text" class="width-dynamic js-amount" value="12500" placeholder="Сумма">
+            <div class="amount-unit">₽</div>
+        </div>
+
+        <div class="font-medium lh12 spacing-4">Способ внесения платежа</div>
+
+        <form class="popup-call__in">
+            <div class="popup-card__fields spacing-4">
+
+                <label class="credit-payment mb-2">
+                    <input type="radio" name="popup-payment" checked>
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="font-medium mb-1">**** **** **** **22</span>
+                                <span class="text5 color-dark-700">Действительна до: 12/25</span>
+                            </span>
+                            <svg width="66" height="20">
+                                <use xlink:href="#card-2-1"></use>
+                            </svg>
+                        </span>
+                    </span>
+                </label>
+                <label class="credit-payment mb-2">
+                    <input type="radio" name="popup-payment">
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="font-medium mb-1">Через СБП</span>
+                                <span class="text5 color-dark-700">Сервис платежной системы ЦБ РФ</span>
+                            </span>
+                            <svg width="86" height="31">
+                                <use xlink:href="#card-5"></use>
+                            </svg>
+                        </span>
+                    </span>
+                </label>
+            </div>
+
+
+            <button class="button button-secondary button--xs button-icon w-100 radius8 gap-8 spacing-35">
+                <svg width="24" height="24">
+                    <use xlink:href="#card"></use>
+                </svg>
+                <span class="size14">Добавить карту</span>
+            </button>
+            <button class="button button-primary button--xs button-icon w-100 radius8 gap-8 spacing-4" data-src="#popup-payment-success" data-fancybox>
+                Оплатить 13 500 ₽
+            </button>
+
+            <div class="tac color-gray-hz text4">В том числе комиссия банка 500 ₽ </div>
+        </form>
+    </div>
+</div>
+<div id="popup-payment-prolongation" class="popup__wrapper popup__wrapper--common popup__wrapper--sm" style="display: none">
+    <div class="popup__in popup__in--align-start">
+        <div class="popup-payment-prolongation__label spacing-4">
+            <svg width="20" height="20">
+                <use xlink:href="#circle-info"></use>
+            </svg>
+            <span>
+                Погасите текущую задолженность<br>
+                перед продлением займа</span>
+        </div>
+
+        <div class="font-medium mb-2 lh12">Сумма текущей задолженности</div>
+
+        <div class="amount-wrapper spacing-35">
+            <input type="text" class="width-dynamic js-amount" value="12500" placeholder="Сумма">
+            <div class="amount-unit">₽</div>
+        </div>
+
+        <div class="font-medium lh12 spacing-4">Способ внесения платежа</div>
+
+        <form class="popup-call__in">
+            <div class="popup-card__fields spacing-4">
+
+                <label class="credit-payment mb-2">
+                    <input type="radio" name="popup-payment" checked>
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="font-medium mb-1">**** **** **** **22</span>
+                                <span class="text5 color-dark-700">Действительна до: 12/25</span>
+                            </span>
+                            <svg width="66" height="20">
+                                <use xlink:href="#card-2-1"></use>
+                            </svg>
+                        </span>
+                    </span>
+                </label>
+                <label class="credit-payment mb-2">
+                    <input type="radio" name="popup-payment">
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="font-medium mb-1">Через СБП</span>
+                                <span class="text5 color-dark-700">Сервис платежной системы ЦБ РФ</span>
+                            </span>
+                            <svg width="86" height="31">
+                                <use xlink:href="#card-5"></use>
+                            </svg>
+                        </span>
+                    </span>
+                </label>
+            </div>
+
+
+            <button class="button button-secondary button--xs button-icon w-100 radius8 gap-8 spacing-35">
+                <svg width="24" height="24">
+                    <use xlink:href="#card"></use>
+                </svg>
+                <span class="size14">Добавить карту</span>
+            </button>
+            <button class="button button-primary button--xs button-icon w-100 radius8 gap-8 spacing-4" data-src="#popup-payment-success" data-fancybox>
+                Оплатить 13 500 ₽
+            </button>
+
+            <div class="tac color-gray-hz text4">В том числе комиссия банка 500 ₽ </div>
+        </form>
+    </div>
+</div>
+
+<div id="popup-prolongation" class="popup__wrapper popup__wrapper--common popup__wrapper--sm" style="display: none">
+    <div class="popup__in popup__in--align-start">
+        <div class="title-h6 size24 font-medium spacing-35 lh12">Продлить займ</div>
+
+        <form class="popup-call__in">
+            <div class="color-dark-600 mb-2 mb-lg-3">Срок продления</div>
+            <div class="calc-range__radio-list d-flex gap-8 spacing-35">
+                <label class="radio flex-grow-1">
+                    <input type="radio" name="duration">
+                    <span class="radio__text w-100 tac">
+                        <span>1 мес</span>
+                    </span>
+                </label>
+                <label class="radio flex-grow-1">
+                    <input type="radio" name="duration" checked>
+                    <span class="radio__text w-100 tac">
+                        <span>2 мес</span>
+                    </span>
+                </label>
+                <label class="radio flex-grow-1">
+                    <input type="radio" name="duration">
+                    <span class="radio__text w-100 tac">
+                        <span>3 мес</span>
+                    </span>
+                </label>
+                <label class="radio flex-grow-1">
+                    <input type="radio" name="duration">
+                    <span class="radio__text w-100 tac">
+                        <span>1 год</span>
+                    </span>
+                </label>
+            </div>
+            <div class="spacing-35">
+                <label class="checkbox text5 spacing-4">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">
+                        <svg><use xlink:href="#check"></use></svg>
+                        <span class="lh14">Проставляя настоящую галочку, я подтверждаю свое ознакомление и <a href="#" class="link-underline">согласие</a> с дополнительным соглашением о продлении срока кредитного договора.</span>
+                    </span>
+                </label>
+                <label class="checkbox text5">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">
+                        <svg><use xlink:href="#check"></use></svg>
+                        <span class="lh14"><a href="#" class="link-underline">График платежей</a></span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="spacing-3">
+                <div class="credit-code__fields credit-code__fields--small mb-2">
+                    <div class="form-field__wrapper">
+                        <div class="form-field form-field--small form-field--bg">
+                            <input type="text" id="signup-code-2" class="form-field__input font-medium js-mask-code" placeholder=" " value="1234">
+                            <label for="signup-code-2" class="form-field__label">Код из SMS</label>
+                        </div>
+                    </div>
+
+                    <button class="button-link size16 font-medium" disabled>Выслать повторно</button>
+                </div>
+                <div class="color-dark-700">Отправить код повторно можно через 55 сек.</div>
+            </div>
+
+            <button class="button button-primary radius8 button--sm w-100 size16" data-src="#popup-prolongation-success" data-fancybox>Подписать</button>
+        </form>
+    </div>
+</div>
+
+
+<div id="popup-prolongation-success" class="popup__wrapper popup__wrapper--common popup__wrapper--sm popup-wrapper--white-bg" style="display: none">
+    <div class="popup__in popup-payment__in tac">
+        <img class="img-responsive spacing-4 align-self-center" src="{{root}}assets/img/credit-success-big.png" alt="Платеж успешно внесен">
+        <div class="title-h45 font-medium spacing-4 lh12">Займ успешно продлен</div>
+        <div class="text4 spacing-35">Новая дата погашения по договору № 5900093 — <br>
+            <span class="font-medium">15 мая 2025 года.</span></div>
+    </div>
+</div>
+
+<div id="popup-payment-success" class="popup__wrapper popup__wrapper--common popup__wrapper--sm popup-wrapper--white-bg" style="display: none">
+    <div class="popup__in popup-payment__in tac">
+        <img class="img-responsive spacing-4 align-self-center" src="{{root}}assets/img/credit-success-big.png" alt="Платеж успешно внесен">
+        <div class="title-h45 font-medium spacing-4 lh12">Платеж успешно внесен</div>
+        <div class="text4 spacing-35">Вы внесли 12 900 ₽ по условиям регулярного платежа по займу № 5900093.</div>
+
+        <button class="button button-secondary button--xs w-100 radius8 gap-8" data-src="#popup-payment-cancel" data-fancybox>
+            <span class="size14">Скачать квитанцию в PDF</span>
+        </button>
+    </div>
+</div>
+
+<div id="popup-payment-cancel" class="popup__wrapper popup__wrapper--common popup__wrapper--sm popup-wrapper--white-bg" style="display: none">
+    <div class="popup__in popup-payment__in tac">
+        <img class="img-responsive spacing-4 align-self-center" src="{{root}}assets/img/credit-cancel-big.png" alt="Платеж не проведен">
+        <div class="title-h45 font-medium spacing-4 lh12">Платеж не проведен</div>
+        <div class="text4 spacing-35">Что-то пошло не так. Проверьте правильность введенных данных и повторите попытку.</div>
+
+        <button class="button button-primary button--xs w-100 radius8 gap-8" data-src="#popup-payment-unavailable" data-fancybox>
+            <span class="size14">Попробовать снова</span>
+        </button>
+    </div>
+</div>
+
+<div id="popup-payment-unavailable" class="popup__wrapper popup__wrapper--common popup__wrapper--sm popup-wrapper--white-bg" style="display: none">
+    <div class="popup__in popup-payment__in tac">
+        <img class="img-responsive spacing-4 align-self-center" src="{{root}}assets/img/credit-progress-big.png" alt="Сервис недоступен">
+        <div class="title-h45 font-medium spacing-4 lh12">Сервис недоступен</div>
+        <div class="text4 spacing-35">В настоящий момент мы не можем принять ваш платеж. <br>Сообщите об ошибке администратору, и мы примем  необходимые меры.</div>
+
+        <div class="social-buttons">
+            <a href="#" class="social-buttons__item social-buttons__item--ws">
+                <span>WhatsApp</span>
+                <svg width="25" height="24">
+                    <use xlink:href="#watsapp"></use>
+                </svg>
+            </a>
+            <a href="#" class="social-buttons__item social-buttons__item--tg">
+                <span>Telegram</span>
+                <svg width="25" height="24">
+                    <use xlink:href="#telegram"></use>
+                </svg>
+            </a>
+            <a href="#" class="social-buttons__item social-buttons__item--vb">
+                <span>Viber</span>
+                <svg width="25" height="24">
+                    <use xlink:href="#viber"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>

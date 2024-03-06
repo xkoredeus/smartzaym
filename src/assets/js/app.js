@@ -586,5 +586,43 @@ $(() => {
             $('.cookies').show();
         }
     }, 3000)
+});
 
+
+$(() => {
+    $.fn.textWidth = function(text, font) {
+
+        if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').hide().appendTo(document.body);
+
+        $.fn.textWidth.fakeEl.text(text || this.val() || this.text() || this.attr('placeholder')).css('font', font || this.css('font'));
+
+        return $.fn.textWidth.fakeEl.width();
+    };
+
+    const inputs = $('.width-dynamic');
+
+    inputs.each(function(i,el){
+        $(el).on('input', function() {
+            $(this).val(function(index, value){
+                return value
+                    .replace(/\D/g, "")
+                    .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, " ");
+            });
+
+            var inputWidth = $(this).textWidth();
+            $(this).css({
+                width: inputWidth
+            })
+        }).trigger('input');
+
+        $(el).on('keypress', function (e) {
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                return false;
+            }
+        });
+
+        $(el).css({
+            width: $(el).textWidth()
+        })
+    });
 });

@@ -24,26 +24,9 @@
         {{> cabinet-header }}
 
         <main role="main" class="cabinet-layout__in">
-            <div class="cabinet-nav">
-                <a href="#" class="cabinet-nav__link">
-                    <svg width="24" height="24">
-                        <use xlink:href="#terminal"></use>
-                    </svg>
-                    <span>Мои займы</span>
-                </a>
-                <a href="#" class="cabinet-nav__link cabinet-nav__link--active">
-                    <svg width="24" height="24">
-                        <use xlink:href="#clipboard"></use>
-                    </svg>
-                    <span>Мои обращения</span>
-                </a>
-                <a href="#" class="cabinet-nav__link">
-                    <svg width="24" height="24">
-                        <use xlink:href="#revert"></use>
-                    </svg>
-                    <span>История</span>
-                </a>
-            </div>
+
+            {{> cabinet-nav }}
+
             <div class="cabinet-content">
                 <div class="container">
 
@@ -53,8 +36,6 @@
             </div>
 
         </main>
-
-        {{> footer }}
 
         {{> popups }}
 
