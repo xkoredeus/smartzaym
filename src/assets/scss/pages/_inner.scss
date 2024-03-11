@@ -159,6 +159,8 @@
 
 .inner-common-block {
   padding: 32px;
+  background-color: #F9F7FC;
+  border: 1px solid rgba(115, 45, 169, 0.1);
 }
 
 .inner-nav {
@@ -241,6 +243,10 @@
   @include r($breakpoint-35) {
     gap: 24px;
   }
+
+  &--small {
+    gap: 24px;
+  }
 }
 
 .document {
@@ -282,6 +288,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    span:first-child {
+      white-space: nowrap;
+    }
 
     span:last-child {
       color: $dark;

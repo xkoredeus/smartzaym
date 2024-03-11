@@ -27252,16 +27252,6 @@ sup {
   }
 }
 
-@media only screen and (max-width: 1300px) and (max-width: 390px) {
-  .header-top__left .link {
-    max-width: 185px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline;
-  }
-}
-
 .header-top__wrapper {
   border-bottom: 1px solid #EAEAEC;
 }
@@ -27566,7 +27556,7 @@ sup {
 }
 
 .header-menu__nav-wrapper {
-  height: calc(100% - 96px);
+  height: 100%;
   padding-top: 8px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -27642,24 +27632,28 @@ sup {
   }
 }
 
-.footer-link {
-  color: currentColor;
+.footer a {
+  color: #A9AAB2;
+}
+
+.footer .link-underline:hover {
+  color: #EAEAEC;
 }
 
 .footer-link span {
-  color: currentColor;
+  color: #A9AAB2;
 }
 
 .footer-link svg {
-  fill: currentColor;
+  fill: #A9AAB2;
 }
 
-.footer-link:hover {
-  color: #732DA9;
+.footer-link:hover svg {
+  fill: #EAEAEC;
 }
 
 .footer-link:hover span {
-  color: #732DA9;
+  color: #EAEAEC;
 }
 
 .footer-top {
@@ -27729,15 +27723,20 @@ sup {
 }
 
 .footer-nav__link {
-  color: #fff;
+  color: #fff !important;
   font-size: 18px;
   font-family: "TTFirsNeue-Medium";
+  border-bottom: 1px solid transparent;
 }
 
 @media only screen and (max-width: 1300px) {
   .footer-nav__link {
     font-size: 16px;
   }
+}
+
+.footer-nav__link:hover {
+  border-bottom-color: #fff;
 }
 
 .footer-right {
@@ -29161,6 +29160,8 @@ sup {
 
 .inner-common-block {
   padding: 32px;
+  background-color: #F9F7FC;
+  border: 1px solid rgba(115, 45, 169, 0.1);
 }
 
 .inner-nav {
@@ -29291,6 +29292,10 @@ sup {
   }
 }
 
+.documents-list--small {
+  gap: 24px;
+}
+
 .document {
   line-height: 1.2;
   display: grid;
@@ -29355,6 +29360,10 @@ sup {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.document__info span:first-child {
+  white-space: nowrap;
 }
 
 .document__info span:last-child {

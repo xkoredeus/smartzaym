@@ -27616,12 +27616,12 @@ $(window).on('load', function () {
     function initHeader() {
         if ($(window).width() < 1300) {
             $('.header-nav').appendTo('.header-menu__nav');
-            $('.header-messenger__list').appendTo('.header-menu__messengers');
+            // $('.header-messenger__list').appendTo('.header-menu__messengers');
 
             $('.profile-header__tel').appendTo('.profile-header__menu-in');
         } else {
             $('.header-nav').appendTo('.header-nav__wrapper');
-            $('.header-messenger__list').appendTo('.header-messenger__wrapper');
+            // $('.header-messenger__list').appendTo('.header-messenger__wrapper');
 
             $('.profile-header__tel').appendTo('.profile-header__tel-wrapper');
         }
@@ -27879,7 +27879,7 @@ $(() => {
 
 var fancyOpts = {
     animationDuration: 600,
-    animationEffect: 'slide-in-in',
+    // animationEffect: 'slide-in-in',
     touch: false,
     scrolling: true,
     clickOutside: false,
@@ -27931,7 +27931,7 @@ $(() => {
             type: 'inline',
             opts: {
                 animationDuration: 600,
-                animationEffect: 'slide-in-in',
+                // animationEffect: 'slide-in-in',
                 touch: false,
                 scrolling: true,
                 baseClass: "popup__wrapper--info-container",

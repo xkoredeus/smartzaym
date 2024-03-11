@@ -59,17 +59,17 @@
       }
     }
 
-    &__left {
-      @include r(390) {
-        .link {
-          max-width: 185px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: inline;
-        }
-      }
-    }
+    //&__left {
+    //  @include r(390) {
+    //    .link {
+    //      max-width: 185px;
+    //      white-space: nowrap;
+    //      overflow: hidden;
+    //      text-overflow: ellipsis;
+    //      display: inline;
+    //    }
+    //  }
+    //}
   }
 
   &__wrapper {
@@ -330,7 +330,8 @@
 
   &__nav {
     &-wrapper {
-      height: calc(100% - 96px);
+      height: 100%;
+      //height: calc(100% - 96px);
       padding-top: 8px;
       //padding-bottom: calc(32px + 48px);
       overflow-y: auto;
