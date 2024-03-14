@@ -642,6 +642,9 @@
 .feed {
   padding: 64px 24px;
 
+  background-color: #F9F7FC;
+  border: 1px solid rgba(115, 45, 169, 0.1);
+
   @include r($breakpoint-35) {
     padding: 24px;
 

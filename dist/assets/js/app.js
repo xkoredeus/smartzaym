@@ -27744,10 +27744,19 @@ $(() => {
 
     $('.js-toggle-dropdown').on('click', function () {
         if ($(window).width() < 1300) {
-            $(this)
-                .toggleClass('active')
-                .next('.header-nav__dropdown')
-                .slideToggle();
+            if ($(this).hasClass('header-nav__link-button')) {
+                $(this)
+                    .toggleClass('active')
+                    .next('.header-nav__dropdown')
+                    .slideToggle();
+            } else {
+                $(this)
+                    .next('.header-nav__link-button')
+                    .toggleClass('active')
+                    .next('.header-nav__dropdown')
+                    .slideToggle();
+            }
+
         }
     });
 
