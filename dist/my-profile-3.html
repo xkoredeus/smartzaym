@@ -119,271 +119,293 @@
     	<div class="preloader"></div>
     </div>
     <!-- /preloader-->
-    <div class="layout">
+    <div class="cabinet-layout">
 
-        <header class="header">
-            <div class="header-content">
-                <div class="header-top__wrapper">
-                    <div class="container-fluid">
-                        <div class="header-top d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <div class="header-top__left d-flex align-items-center gap-32">
-                                    <button class="link" data-fancybox data-src="#popup-location">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span>Москва и Московская область</span>
-                                    </button>
-                                    <a href="job.html" class="link d-none d-lg-inline-block">
-                                        <svg>
-                                            <use xlink:href="#case"></use>
-                                        </svg>
-                                        <span>Вакансии</span>
-                                    </a>
+        <header class="cabinet-header">
+            <div class="cabinet-header__container">
+                <div class="profile-header__in">
+                    <div class="d-flex align-items-center">
+                        <button class="burger js-cabinet-menu-toggle">
+                            <svg><use xlink:href="#burger"></use></svg>
+                            <svg><use xlink:href="#cross-1"></use></svg>
+                        </button>
+                        <a href="home.html" class="auth-header__logo">
+                            <svg width="174" height="48">
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                        </a>
+                    </div>
+        
+        
+                    <div class="cabinet-header__info js-toggle-header-dropdown">
+                        <div class="cabinet-header__info-content">
+                            <div class="cabinet-header__tel-wrapper">
+                                <div class="cabinet-header__tel">
+                                    <div class="text4 font-medium">Алексей Константинов</div>
+                                    <span class="text5 color-dark-700">+7 992 564-00-11</span>
                                 </div>
                             </div>
         
-                            <!--<div class="d-flex align-items-center gap-24">-->
-                            <!--    <div class="header-messenger__wrapper">-->
-                            <!--        <div class="header-messenger__list">-->
-                            <!--            <a href="#" class="header-messenger mr-lg-2">-->
-                            <!--                <svg  width="32" height="32">-->
-                            <!--                    <use xlink:href="#whatsapp"></use>-->
-                            <!--                </svg>-->
-                            <!--            </a>-->
+                            <div class="cabinet-header__photo">
+                                АК
+                            </div>
+                        </div>
         
-                            <!--            <a href="#" class="header-messenger">-->
-                            <!--                <svg width="32" height="32">-->
-                            <!--                    <use xlink:href="#telegram"></use>-->
-                            <!--                </svg>-->
-                            <!--            </a>-->
-                            <!--        </div>-->
-                            <!--    </div>-->
         
-                            <!--    <button class="link" data-fancybox data-src="#popup-call">-->
-                            <!--        <svg>-->
-                            <!--            <use xlink:href="#tel"></use>-->
-                            <!--        </svg>-->
-                            <!--        <span>Заказать звонок</span>-->
-                            <!--    </button>-->
-                            <!--</div>-->
+                        <div class="cabinet-header__dropdown">
+                            <a href="my-profile.html" class="cabinet-header__dropdown-link">Профиль</a>
+                            <a href="#" class="cabinet-header__dropdown-link">Выйти</a>
                         </div>
                     </div>
                 </div>
-                <div class="header-bottom__wrapper">
-                    <div class="container-fluid">
-                        <div class="header-bottom">
-                            <div class="d-flex align-items-center">
-                                <button class="burger js-menu-toggle">
-                                    <svg><use xlink:href="#burger"></use></svg>
-                                    <svg><use xlink:href="#cross-1"></use></svg>
-                                </button>
-                                <a href="home.html" class="header-logo">
-                                    <svg width="174" height="48">
-                                        <use xlink:href="#logo"></use>
-                                    </svg>
-                                </a>
-        
-                            </div>
-        
-                            <div class="header-nav__wrapper">
-                                <div class="header-nav">
-                                    <div class="header-nav__link-wrapper">
-                                        <span href="#" class="header-nav__link js-toggle-dropdown">Услуги</span>
-                                        <button class="header-nav__link-button js-toggle-dropdown">
-                                            <svg width="20" height="20">
-                                                <use xlink:href="#chevron-down"></use>
-                                            </svg>
-                                        </button>
-        
-                                        <div class="header-nav__dropdown">
-                                            <div class="header-nav__dropdown-list">
-                                                <a href="landing-2.html" class="header-nav__dropdown-link">Займ под залог ПТС</a>
-                                                <a href="landing-3.html" class="header-nav__dropdown-link">Займ под залог авто</a>
-                                                <a href="landing-4.html" class="header-nav__dropdown-link">Займ под залог спецтехники</a>
-                                                <a href="landing-1.html" class="header-nav__dropdown-link">Займ под залог коммерческого транспорта</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="header-nav__link-wrapper">
-                                        <span href="#" class="header-nav__link js-toggle-dropdown">Клиентам</span>
-                                        <button class="header-nav__link-button js-toggle-dropdown">
-                                            <svg width="20" height="20">
-                                                <use xlink:href="#chevron-down"></use>
-                                            </svg>
-                                        </button>
-        
-                                        <div class="header-nav__dropdown">
-                                            <div class="header-nav__dropdown-list">
-                                                <a href="payments.html" class="header-nav__dropdown-link">Внесение платежей</a>
-                                                <a href="expiration.html" class="header-nav__dropdown-link">Просрочка</a>
-                                                <a href="faq.html" class="header-nav__dropdown-link">Вопрос-ответ</a>
-                                                <a href="documents.html" class="header-nav__dropdown-link">Документы</a>
-                                                <a href="details.html" class="header-nav__dropdown-link">Реквизиты</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="header-nav__link-wrapper">
-                                        <a href="about.html" class="header-nav__link">О компании</a>
-                                    </div>
-                                    <div class="header-nav__link-wrapper">
-                                        <span class="header-nav__link js-toggle-dropdown">Пресс-центр</span>
-                                        <button class="header-nav__link-button js-toggle-dropdown">
-                                            <svg width="20" height="20">
-                                                <use xlink:href="#chevron-down"></use>
-                                            </svg>
-                                        </button>
-        
-                                        <div class="header-nav__dropdown">
-                                            <div class="header-nav__dropdown-list">
-                                                <a href="news.html" class="header-nav__dropdown-link">Новости и статьи</a>
-                                                <a href="media.html" class="header-nav__dropdown-link">Для прессы</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="header-nav__link-wrapper d-lg-none">
-                                        <a href="job.html" class="header-nav__link">Вакансии</a>
-                                    </div>
-                                    <div class="header-nav__link-wrapper">
-                                        <a href="contacts.html" class="header-nav__link">Контакты</a>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <button class="button button-icon button-secondary button--sm">
-                                <svg width="24" height="24">
-                                    <use xlink:href="#cabinet"></use>
-                                </svg>
-                                <span>Личный кабинет</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="header-menu">
-                    <div class="container">
-                        <div class="header-menu__in">
-                            <div class="row header-menu__nav-wrapper">
-                                <div class="col-sm-8 offset-sm-2">
-                                    <div class="header-menu__nav"></div>
-                                </div>
-                            </div>
-                            <!--<div class="header-menu__messengers"></div>-->
-                        </div>
-                    </div>
-        
+            </div>
+            <div class="cabinet-header__menu">
+                <div class="container">
+                    <div class="cabinet-header__menu-in"></div>
                 </div>
             </div>
         </header>
-        <main role="main" class="layout__in">
+        <main role="main" class="cabinet-layout__in">
 
-            <div class="section">
+            <div class="cabinet-nav">
+                <div class="cabinet-nav__in">
+                    <a href="credit-create-1.html" class="cabinet-nav__sublink">
+                        <svg width="24" height="24">
+                            <use xlink:href="#nav-plus"></use>
+                        </svg>
+                        <span>Новый займ</span>
+                    </a>
+                    <a class="cabinet-nav__sublink" data-src="#popup-payment-switch" data-fancybox>
+                        <svg width="24" height="24">
+                            <use xlink:href="#nav-payment"></use>
+                        </svg>
+                        <span>Внести платеж</span>
+                    </a>
+                    <a href="credits.html" class="cabinet-nav__link">
+                        <svg width="24" height="24">
+                            <use xlink:href="#terminal"></use>
+                        </svg>
+                        <span>Мои займы</span>
+                    </a>
+                    <a href="appeals.html" class="cabinet-nav__link cabinet-nav__link--active">
+                        <svg width="24" height="24">
+                            <use xlink:href="#clipboard"></use>
+                        </svg>
+                        <span>Мои обращения</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cabinet-content">
                 <div class="container">
-                    <div class="row row-gap-24">
-                        <div class="col-xl-8">
-                            <div class="crumbs">
-                                <a href="#" class="link-underline">Главная</a>
-                                <span>/</span>
-                                <span class="color-dark-700">Карта сайта</span>
+
+                    <div class="notification">
+                        Изменения успешно внесены
+                        <button class="notification__button">
+                            <svg width="24" height="24">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                            <div class="spacing-4">
+                                <a href="my-profile.html" class="button button-icon link-purple size16 p-0">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="#arrow-right-3"></use>
+                                    </svg>
+                                    <span>Вернуться к профилю</span>
+                                </a>
                             </div>
-            
-                            <div class="title-h2 ls15 spacing-2 font-medium lh11">
-                                Карта сайта
-                            </div>
-            
-                            <div class="d-flex flex-column align-items-start text2 row-gap-8">
-                                <a href="home.html" class="link-underline">Главная</a>
-                                <a href="landing-1.html" class="link-underline">Займ под залог ПТС авто</a>
-                                <a href="landing-2.html" class="link-underline">Займ под залог авто</a>
-                                <a href="landing-3.html" class="link-underline">Займ под залог спецтехники</a>
-                                <a href="landing-4.html" class="link-underline">Займ под залог коммерческого транспорта</a>
-                                <a href="payments.html" class="link-underline">Внесение платежей</a>
-                                <a href="expiration.html" class="link-underline">Просрочка</a>
-                                <a href="faq.html" class="link-underline">Вопрос-ответ</a>
-                                <a href="documents.html" class="link-underline">Документы</a>
-                                <a href="about.html" class="link-underline">О компании</a>
-                                <a href="news.html" class="link-underline">Новости и статьи</a>
-                                <a href="news-page.html" class="link-underline upp">Страница новости</a>
-                                <a href="media.html" class="link-underline">Для прессы</a>
-                                <a href="contacts.html" class="link-underline">Контакты</a>
-                                <a href="job.html" class="link-underline">Вакансии</a>
-                                <a href="policy.html" class="link-underline">Политика конфиденциальности</a>
-                                <a href="policy.html" class="link-underline">Политика обработки персональных данных</a>
+                            <div class="spacing-4 title-h45 font-medium ls08">Фото автомобиля</div>
+                    
+                            <div class="leaf">
+                                <div class="spacing-4">
+                                    <div class="my-profile__sec">
+                                        <div class="my-profile__sec-text font-medium">
+                                            После изменения фотографий потребуется <br>
+                                            дополнительное подтверждение администратора
+                                        </div>
+                    
+                                        <img src="assets/img/my-profile-attention.png" alt="Attention">
+                                    </div>
+                                </div>
+                                <div class="spacing-4">
+                                    <div class="card profile-document profile-document--success mb-2">
+                                        <div class="profile-document__content">
+                                            <div class="d-flex align-items-center gap-4 mb-1">
+                                                <div class="font-medium">Фотографии авто</div>
+                                                <svg width="16" height="16"><use xlink:href="#granted"></use></svg>
+                                            </div>
+                                            <div class="color-dark-700 text5 mb-2">Фотографии авто с разных ракурсов</div>
+                    
+                                            <div class="profile-document__thumbs">
+                                                <div class="document-thumb">
+                                                    <img src="assets/img/passport-thumb-1.jpg" alt="passport thumb">
+                                                </div>
+                                                <div class="document-thumb">
+                                                    <img src="assets/img/passport-thumb-2.jpg" alt="passport thumb">
+                                                </div>
+                                                <div class="document-thumb">
+                                                    <img src="assets/img/passport-thumb-3.jpg" alt="passport thumb">
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="profile-document__actions">
+                                            <button class="button button-secondary button--sm button-icon js-toggle-popup-photo">
+                                                <svg width="24" height="24">
+                                                    <use xlink:href="#pencil-2"></use>
+                                                </svg>
+                                                <span class="text4">Изменить</span>
+                                            </button>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="card profile-document profile-document--success mb-2">
+                                        <div class="profile-document__content">
+                                            <div class="d-flex align-items-center gap-4 mb-1">
+                                                <div class="font-medium">Вы и Ваш автомобиль</div>
+                                                <svg width="16" height="16"><use xlink:href="#granted"></use></svg>
+                                            </div>
+                                            <div class="color-dark-700 text5 mb-2">
+                                                Вы на фоне авто<br>
+                                                или Ваш селфи с авто</div>
+                    
+                                            <div class="profile-document__thumbs">
+                                                <div class="document-thumb">
+                                                    <img src="assets/img/passport-thumb-1.jpg" alt="passport thumb">
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="profile-document__actions">
+                                            <button class="button button-secondary button--sm button-icon js-toggle-popup-photo">
+                                                <svg width="24" height="24">
+                                                    <use xlink:href="#pencil-2"></use>
+                                                </svg>
+                                                <span class="text4">Изменить</span>
+                                            </button>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="card profile-document profile-document--success mb-2">
+                                        <div class="profile-document__content">
+                                            <div class="d-flex align-items-center gap-4 mb-1">
+                                                <div class="font-medium">Приборная панель с пробегом</div>
+                                                <svg width="16" height="16"><use xlink:href="#granted"></use></svg>
+                                            </div>
+                    
+                                            <div class="profile-document__thumbs">
+                                                <div class="document-thumb">
+                                                    <img src="assets/img/passport-thumb-1.jpg" alt="passport thumb">
+                                                </div>
+                                                <div class="document-thumb">
+                                                    <img src="assets/img/passport-thumb-2.jpg" alt="passport thumb">
+                                                </div>
+                                                <div class="document-thumb">
+                                                    <img src="assets/img/passport-thumb-3.jpg" alt="passport thumb">
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="profile-document__actions">
+                                            <button class="button button-secondary button--sm button-icon js-toggle-popup-photo">
+                                                <svg width="24" height="24">
+                                                    <use xlink:href="#pencil-2"></use>
+                                                </svg>
+                                                <span class="text4">Изменить</span>
+                                            </button>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="card profile-document profile-document--success mb-2">
+                                        <div class="profile-document__content">
+                                            <div class="d-flex align-items-center gap-4 mb-1">
+                                                <div class="font-medium">VIN-номер</div>
+                                                <svg width="16" height="16"><use xlink:href="#granted"></use></svg>
+                                            </div>
+                                            <div class="color-dark-700 text5 mb-2">Фото VIN-номера, выгравированный на кузове</div>
+                    
+                                            <div class="profile-document__thumbs">
+                                                <div class="document-thumb">
+                                                    <img src="assets/img/passport-thumb-1.jpg" alt="passport thumb">
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="profile-document__actions">
+                                            <button class="button button-secondary button--sm button-icon js-toggle-popup-photo">
+                                                <svg width="24" height="24">
+                                                    <use xlink:href="#pencil-2"></use>
+                                                </svg>
+                                                <span class="text4">Изменить</span>
+                                            </button>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="card profile-document profile-document--success mb-2">
+                                        <div class="profile-document__content">
+                                            <div class="d-flex align-items-center gap-4 mb-1">
+                                                <div class="font-medium">Дополнительные фото</div>
+                                                <svg width="16" height="16"><use xlink:href="#granted"></use></svg>
+                                            </div>
+                                            <div class="color-dark-700 text5 mb-2">Добавьте фотографии всех повреждений,<br> если таковые имеются.</div>
+                    
+                                            <div class="profile-document__thumbs">
+                                                <div class="document-thumb">
+                                                    <img src="assets/img/passport-thumb-1.jpg" alt="passport thumb">
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="profile-document__actions">
+                                            <button class="button button-secondary button--sm button-icon js-toggle-popup-photo">
+                                                <svg width="24" height="24">
+                                                    <use xlink:href="#pencil-2"></use>
+                                                </svg>
+                                                <span class="text4">Изменить</span>
+                                            </button>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                    
+                                <div class="credit-code__fields--small spacing-3">
+                                    <div class="form-field__wrapper">
+                                        <div class="form-field form-field--small form-field--bg">
+                                            <input type="text" id="signup-code" class="form-field__input font-medium js-mask-code" placeholder=" ">
+                                            <label for="signup-code" class="form-field__label">Код из SMS</label>
+                                        </div>
+                                    </div>
+                    
+                                    <button class="button-link size16 font-medium">Получить код из SMS</button>
+                                </div>
+                    
+                                <button class="button button-primary w-100 button--sm radius8 size16" disabled>Сохранить изменения</button>
                             </div>
                         </div>
                     </div>
+                    
+
                 </div>
+
+                <footer class="cabinet-footer">
+                    <div class="cabinet-footer__container">
+                        <div class="cabinet-footer__in">
+                            <div class="cabinet-footer__nav">
+                                <a href="#" class="cabinet-footer__link text4">Внесение платежей</a>
+                                <a href="#" class="cabinet-footer__link text4">Просрочка платежей</a>
+                                <a href="#" class="cabinet-footer__link text4">Документы</a>
+                                <a href="#" class="cabinet-footer__link text4">Контакты</a>
+                            </div>
+                            <div class="text5">«К2КАПИТАЛ» 2024. Все права защищены.</div>
+                        </div>
+                    </div>
+                </footer>
             </div>
 
         </main>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7">
-                        <div class="footer-left">
-                            <div class="footer-top spacing-1">
-                                <button class="footer-link link">
-                                    <svg>
-                                        <use xlink:href="#location"></use>
-                                    </svg>
-                                    <span>Москва и Московская область</span>
-                                </button>
-                                <a href="tel:88005504665" class="footer-link link">
-                                    <svg>
-                                        <use xlink:href="#tel-1"></use>
-                                    </svg>
-                                    <span>8 800 550-46-65</span>
-                                </a>
-                                <a href="mailto:Info@smartzaym.ru" class="footer-link link">
-                                    <svg>
-                                        <use xlink:href="#email"></use>
-                                    </svg>
-                                    <span>Info@smartzaym.ru</span>
-                                </a>
-                            </div>
-                            <div class="footer-nav spacing-1">
-                                <a class="footer-nav__link" href="payments.html">Внесение платежей</a>
-                                <a class="footer-nav__link" href="expiration.html">Просрочка платежей</a>
-                                <a class="footer-nav__link" href="faq.html">Вопрос-ответ</a>
-                                <a class="footer-nav__link" href="about.html">О компании</a>
-                                <a class="footer-nav__link" href="documents.html">Документы</a>
-                                <a class="footer-nav__link" href="news.html">Пресс-центр</a>
-                                <a class="footer-nav__link" href="job.html">Вакансии</a>
-                                <a class="footer-nav__link" href="media.html">Для СМИ</a>
-                                <a class="footer-nav__link" href="contacts.html">Контакты</a>
-                            </div>
-                            <div class="lh12 text5 spacing-35">
-                                Пример расчета: Пример расчёта полной стоимости займа: при займе под 2.7% в месяц, полная стоимость займа составит 2.7 × 12 (месяцев) = 32.4% в год. При займе 100 000,00 руб. на 1 год, ежемесячный платеж составит 9 867,14 руб., сумма процентов через 1 месяц составит 2 700,00 руб., через 12 месяцев 18 405,74 руб. ПСК: от 32.4% до 105.673% годовых. Комиссия за оформление займа отсутствует. Минимальный период пользования займом составляет 30 дней, максимальный 60 месяцев. Пеня при просрочке составляет 20% годовых от суммы просроченной задолженности за каждый календарный день.
-                            </div>
-                            <div class="lh12 text5">
-                                «К2КАПИТАЛ» 2024. Все права защищены.
-                            </div>
-        
-                        </div>
-                    </div>
-                    <div class="col-xl-5">
-                        <div class="footer-right">
-                            <div class="text5 color-dark-400 lh12">
-                                <div class="spacing-4">Общество с ограниченной ответственностью Микрокредитная компания «К2КАПИТАЛ» (ООО МКК «К2КАПИТАЛ»). ОГРН <span class="color-dark-400">1&#8203;2&#8203;3&#8203;7&#8203;8&#8203;0&#8203;0&#8203;1&#8203;3&#8203;2&#8203;5&#8203;8&#8203;0</span> ИНН <span class="color-dark-400">7&#8203;8&#8203;1&#8203;4&#8203;8&#8203;3&#8203;0&#8203;4&#8203;6&#8203;9</span>. <span class="color-dark-400">197350</span>, г. Санкт-Петербург, вн. тер. г. муниципальный округ Юнтолово, пр-кт Комендантский, д. 43, к. 3, литера А, офис 7-И</div>
-                                <div class="spacing-4">ООО МКК «К2КАПИТАЛ» с 15.02.2024 является членом СРО «МиР» (107078, г. Москва, Орликов переулок, д.5, стр.1, этаж 2, пом.11).</div>
-                                <div class="spacing-4">Регистрационный номер в государственном <a href="#" class="link-underline">реестре МФО</a> <span class="color-dark-400">2&#8203;4&#8203;0&#8203;3&#8203;1&#8203;4&#8203;0&#8203;0&#8203;1&#8203;0&#8203;0&#8203;1&#8203;7</span> от 17.01.2024.
-                                    <a href="#" class="link-underline">Сайт Банка России.</a></div>
-        
-                                <div class="d-flex flex-column align-items-start gap-5">
-                                    <a class="footer-link link-underline" href="#">Свидетельство СРО</a>
-                                    <a class="footer-link link-underline" href="#">Политика конфиденциальности</a>
-                                    <a class="footer-link link-underline" href="#">Политика обработки персональных данных</a>
-                                    <a class="footer-link link-underline" href="#">Карта сайта</a>
-                                    <a class="footer-link link-underline" href="#">Приемная Банка России</a>
-                                    <a class="footer-link link-underline" href="#">Финансовый уполномоченный</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
         <div id="popup-call" class="popup__wrapper popup__wrapper--common" style="display: none">
             <div class="popup__in">
                 <div class="title-h3 font-medium spacing-4 tac lh12">Закажите обратный звонок</div>

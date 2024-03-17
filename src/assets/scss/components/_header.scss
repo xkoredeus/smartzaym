@@ -9,7 +9,7 @@
   @include ease;
 
   &.sticky:not(.active) {
-    transform: translateY(-68px);
+    transform: translateY(-58px);
     box-shadow: 0 16px 24px 0 #00000014;
 
     @include r($breakpoint-2) {

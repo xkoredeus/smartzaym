@@ -132,3 +132,25 @@
     z-index: 1;
   }
 }
+
+.footer-profile {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: #A9AAB2;
+  background-color: $dark;
+
+ &__in {
+   font-size: 12px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 40px;
+   row-gap: 12px;
+
+   .footer-link {
+     &:hover {
+       color: #A9AAB2;
+       border-bottom-color: $tr;
+     }
+   }
+ }
+}

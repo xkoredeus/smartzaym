@@ -3,7 +3,7 @@ layout: cabinet
 ---
 <div class="row">
     <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
-        <div class="leaf my-profile__top mb-2">
+        <div class="leaf leaf-main my-profile__top mb-2">
             <div class="my-profile__photo spacing-4">
                 АК
             </div>
@@ -37,14 +37,14 @@ layout: cabinet
             </div>
         </div>
 
-        <div class="leaf mb-2">
+        <div class="leaf leaf-main mb-2">
             <div class="text font-medium spacing-4">Персональная информация</div>
             <div>
                 <div class="my-profile__row">
                     <div>Фото паспорта</div>
                     <div class="font-medium">Добавлено 3 фото</div>
                     <a href="my-profile-2.html" class="my-profile__button">
-                        <svg width="24" height="24" fill="#6A6B78">
+                        <svg width="24" height="24" fill="#BFBFC6">
                             <use xlink:href="#pencil"></use>
                         </svg>
                     </a>
@@ -53,7 +53,7 @@ layout: cabinet
                     <div>Регистрация</div>
                     <div class="font-medium">Москва, ул. Тверская, д. 116, корп. 5, кв. 8</div>
                     <a href="my-profile-1.html" class="my-profile__button">
-                        <svg width="24" height="24" fill="#6A6B78">
+                        <svg width="24" height="24" fill="#BFBFC6">
                             <use xlink:href="#pencil"></use>
                         </svg>
                     </a>
@@ -62,7 +62,7 @@ layout: cabinet
                     <div>Трудовая деятельность</div>
                     <div class="font-medium">Постоянная работа</div>
                     <a href="my-profile-1.html" class="my-profile__button">
-                        <svg width="24" height="24" fill="#6A6B78">
+                        <svg width="24" height="24" fill="#BFBFC6">
                             <use xlink:href="#pencil"></use>
                         </svg>
                     </a>
@@ -71,7 +71,7 @@ layout: cabinet
                     <div>Дополнительная информация</div>
                     <div class="font-medium">55 000 ₽ ссумарного дохода</div>
                     <a href="my-profile-1.html" class="my-profile__button">
-                        <svg width="24" height="24" fill="#6A6B78">
+                        <svg width="24" height="24" fill="#BFBFC6">
                             <use xlink:href="#pencil"></use>
                         </svg>
                     </a>
@@ -79,7 +79,7 @@ layout: cabinet
             </div>
         </div>
 
-        <div class="leaf mb-2">
+        <div class="leaf leaf-main mb-2">
             <div class="text font-medium spacing-4">Платежные методы</div>
 
             <label class="credit-payment mb-2">
@@ -126,35 +126,58 @@ layout: cabinet
             </button>
         </div>
 
-        <div class="leaf mb-2">
+
+
+        <div class="leaf leaf-main mb-2">
             <div class="text font-medium spacing-4">Объект залога</div>
             <div class="spacing-4">
-                <div class="my-profile__row">
+                <div class="doc-row">
                     <div>Документы на авто</div>
-                    <div class="font-medium">Добавлено 3 фото</div>
+                    <div class="doc-thumbs">
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-1.jpg');"></div>
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-2.jpg');"></div>
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-3.jpg');"></div>
+                    </div>
                 </div>
-                <div class="my-profile__row">
+                <div class="doc-row">
                     <div>Фотографии авто</div>
-                    <div class="font-medium">Добавлено 5 фото</div>
+                    <div class="doc-thumbs">
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-1.jpg');"></div>
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-2.jpg');"></div>
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-3.jpg');"></div>
+                        <div class="doc-thumbs__item doc-thumbs__item--more">+3</div>
+                    </div>
                 </div>
-                <div class="my-profile__row">
+                <div class="doc-row">
                     <div>Вы и Ваш автомобиль</div>
-                    <div class="font-medium">Добавлена 1 фото</div>
+                    <div class="doc-thumbs">
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-3.jpg');"></div>
+                    </div>
                 </div>
-                <div class="my-profile__row">
+                <div class="doc-row">
                     <div>Приборная панель</div>
-                    <div class="font-medium">Добавлено 1 фото</div>
+                    <div class="doc-thumbs">
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-3.jpg');"></div>
+                    </div>
                 </div>
-                <div class="my-profile__row">
+                <div class="doc-row">
                     <div>VIN-номер</div>
-                    <div class="font-medium">Добавлено 1 фото</div>
+                    <div class="doc-thumbs">
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-3.jpg');"></div>
+                    </div>
                 </div>
-                <div class="my-profile__row">
+                <div class="doc-row">
                     <div>Доолнительные фото</div>
-                    <div class="font-medium">Добавлено 1 фото</div>
+                    <div class="doc-thumbs">
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-1.jpg');"></div>
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-2.jpg');"></div>
+                        <div class="doc-thumbs__item" style="background-image: url('{{root}}assets/img/passport-thumb-3.jpg');"></div>
+                    </div>
+
                 </div>
             </div>
-            <button class="button button-secondary button--sm button-icon">
+
+            <button class="button button-secondary button--sm button-icon" data-src="#popup-doc-gallery" data-fancybox>
                 <svg width="24" height="24">
                     <use xlink:href="#camera"></use>
                 </svg>

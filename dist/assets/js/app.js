@@ -27760,6 +27760,26 @@ $(() => {
         }
     });
 
+    $('.js-toggle-header-dropdown').on('click', function () {
+        $(this).toggleClass('active');
+    });
+
+    $('.js-cabinet-menu-toggle').on('click', function (e) {
+        $(this).toggleClass('active');
+        $('.cabinet-nav').toggleClass('active');
+        $('body').toggleClass('is-loading');
+        e.stopPropagation();
+    });
+
+    $('.appeals-nav__link--active').on('click', function (e) {
+        e.preventDefault();
+        $(this)
+            .parents('.appeals-nav')
+            .toggleClass('active')
+            .find('.appeals-nav__link--inactive')
+            .slideToggle();
+    });
+
     $('.is-loading').on('click', '.profile-layout__in', function (){
         if ($('.profile-header').hasClass('active')) {
             $('.is-loading')
@@ -27771,7 +27791,57 @@ $(() => {
 
         }
     });
-})
+});
+
+// containers
+$(() => {
+    $(document).on('click', function (e) {
+        var container = $('.js-toggle-header-dropdown');
+
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.removeClass('active');
+        }
+
+
+        var container2 = $('.cabinet-nav');
+
+        if (container2.hasClass('active') && !container2.is(e.target) && container.has(e.target).length === 0) {
+            container2.removeClass('active');
+            $('body').removeClass('active');
+            $('.js-cabinet-menu-toggle').removeClass('active');
+        }
+    });
+});
+
+$(() => {
+
+    var galleryBottomSlider = new Swiper(".js-gallery-bottom-slider", {
+        speed: 700,
+        freeMode: false,
+        spaceBetween: 4,
+        // allowTouchMove: false,
+        slidesPerView: "auto",
+        navigation: {
+            nextEl: ".js-gallery-slider-next",
+            prevEl: ".js-gallery-slider-prev",
+        },
+        thumbs: {
+            swiper: galleryTopSlider,
+        },
+    });
+    var galleryTopSlider = new Swiper(".js-gallery-top-slider", {
+        speed: 700,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".js-gallery-slider-next",
+            prevEl: ".js-gallery-slider-prev",
+        },
+        thumbs: {
+            swiper: galleryBottomSlider,
+        },
+    });
+});
 
 $(() => {
     $('.js-toggle-question').on('click', function () {
@@ -28027,6 +28097,7 @@ $(() => {
     $('.js-close-photo-cancel').on('click', function (){
         $.fancybox.close(true);
     });
+
 })
 
 $(() => {

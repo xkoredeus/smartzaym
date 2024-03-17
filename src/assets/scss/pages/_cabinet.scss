@@ -144,11 +144,39 @@
     padding-left: 16px;
   }
 
+  img:nth-child(2) {
+    align-self: flex-end;
+  }
+
   &-2 {
     img:nth-child(2) {
       transform: scale(1.2);
       transform-origin: top;
     }
+  }
+}
+
+.mdc-tooltip {
+  &__surface {
+    background-color: #fff !important;
+    color: $dark !important;
+    font-size: 14px !important;
+    font-family: 'TTFirsNeue-Regular' !important;
+    padding: 24px !important;
+    line-height: 1.4 !important;
+    box-shadow: 8px 16px 60px rgba(37, 190, 172, 0.24);
+    border-radius: 14px;
+  }
+}
+
+.button--circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  svg {
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -709,7 +737,6 @@
 }
 
 .cabinet-layout {
-  //overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -718,14 +745,67 @@
     display: grid;
     grid-template-columns: 280px 1fr;
     flex-grow: 1;
+
+    @include r($breakpoint-2) {
+      overflow: hidden;
+      position: relative;
+      grid-template-columns: auto;
+    }
   }
 }
 
 .cabinet-content {
-  padding: 40px 16px;
+  padding: 40px 16px 24px;
   height: 100%;
   background-color: #F9F9F9;
   flex-grow: 1;
+
+  @include r($breakpoint-35) {
+    padding-top: 24px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  & > .container {
+    flex-grow: 1;
+  }
+}
+
+.cabinet-footer {
+  padding-top: 16px;
+  border-top: 1px solid #EEEEEF;
+  color: $dark-700;
+  width: 100%;
+
+  &__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    @include r($breakpoint-3) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 3px;
+  }
+  &__link {
+    color: $dark-700;
+  }
 }
 
 
@@ -734,16 +814,75 @@
   background-color: $purple;
   color: $white;
 
+  @include r($breakpoint-2) {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    max-width: 360px;
+    z-index: 100;
+    @include ease;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      left: 0;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @include r($breakpoint-35) {
+    max-width: unset;
+  }
+
   &__in {
     position: sticky;
     top: 8px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 16px;
+    padding-top: 32px;
     padding-bottom: 16px;
+
+    @include r($breakpoint-2) {
+      padding-top: 24px;
+    }
   }
 
+  &__sublink {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
+
+    background-color: #541A80;
+    color: $white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    @include font-medium;
+    padding: 12px 12px 12px 16px;
+
+    &:first-child {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom: 1px solid #5C2586;
+    }
+
+    &:nth-child(2) {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    &:hover {
+      color: #CBB2DF;
+    }
+
+    svg {
+      min-width: 24px;
+    }
+  }
 
   &__link {
     padding: 12px 12px 12px 32px;
@@ -784,6 +923,11 @@
   &__container {
     padding-left: 32px;
     padding-right: 32px;
+
+    @include r($breakpoint-35) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
   }
 
   &.active {
@@ -820,27 +964,58 @@
   }
 
   &__info {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    position: relative;
 
-    @include r($breakpoint-35) {
-      a:first-child {
-        display: none;
-      }
+    &-content {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
 
-      .button {
-        width: 52px;
-        height: 52px;
-        @include flex-center;
-        span {
+      @include r($breakpoint-35) {
+        & > div:first-child {
           display: none;
         }
-        svg {
-          width: 24px;
-          height: 24px;
+
+        .button {
+          width: 52px;
+          height: 52px;
+          @include flex-center;
+          span {
+            display: none;
+          }
+          svg {
+            width: 24px;
+            height: 24px;
+          }
         }
       }
+    }
+
+    &.active {
+      .cabinet-header__dropdown {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    background: #FFFFFF;
+    box-shadow: 0 33px 38px rgba(0, 0, 0, 0.07), 0 4.13211px 10.9142px rgba(0, 0, 0, 0.0867476);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    visibility: hidden;
+    @include ease;
+
+    &-link {
+      padding: 8px 16px;
     }
   }
 
@@ -897,12 +1072,68 @@
   display: flex;
   flex-direction: column;
 
+  @include r($breakpoint-2) {
+    position: relative;
+    top: auto;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    //border-bottom: 1px solid #EFEFF1;
+
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include r($breakpoint-35) {
+    width: calc(100% + 28px);
+    margin-left: -14px;
+  }
+
+  &.active {
+    border-bottom: 1px solid #EFEFF1;
+
+    .appeals-nav__button {
+      transform: scaleY(-1);
+    }
+    .appeals-nav__link {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 16px;
+    top: 11px;
+    display: none;
+    @include ease;
+    @include r($breakpoint-2) {
+      display: block;
+    }
+  }
+
   &__link {
     position: relative;
     padding: 12px 26px;
     @include font-medium;
 
+    &--inactive {
+      @include r($breakpoint-2) {
+        transition: unset;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
     &--active {
+      &:hover {
+        color: $dark !important;
+      }
+      @include r($breakpoint-2) {
+        display: inline !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
       &::before {
         position: absolute;
         content: '';
@@ -912,6 +1143,10 @@
         top: 50%;
         transform: translateY(-50%);
         background-color: $purple;
+
+        @include r($breakpoint-2) {
+          display: none;
+        }
       }
     }
 
@@ -922,16 +1157,44 @@
 }
 
 .appeals-types {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  row-gap: 12px;
+  //display: flex;
+  ////flex-wrap: wrap;
+  //gap: 24px;
+  //row-gap: 12px;
+  //width: 100%;
+  //white-space: nowrap;
+  //overflow-x: auto;
+}
+
+.leaf-main {
+  @include r($breakpoint-35) {
+    width: calc(100% + 28px);
+    margin-left: -14px;
+  }
+}
+
+.leaf-appeals {
+  @include r($breakpoint-2) {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
 }
 
 .appeals-type {
   @include font-medium;
   @include text;
   color: $dark-600;
+  @include r($breakpoint-35) {
+    font-size: 14px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 24px;
+
+    @include r($breakpoint-35) {
+      margin-right: 10px;
+    }
+  }
 
   &:hover {
     color: $purple;
@@ -993,12 +1256,22 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
+    
+    .link {
+      text-align: right;
+
+      @include r($breakpoint-35) {
+        font-size: 13px !important;
+        white-space: nowrap;
+      }
+    }
   }
 
   &__title {
     display: flex;
     align-items: center;
     gap: 4px;
+    flex-wrap: wrap;
   }
 
   &__label {
@@ -1008,6 +1281,11 @@
     letter-spacing: 0.4px;
     text-transform: uppercase;
     @include font-medium;
+
+    @include r($breakpoint-35) {
+      font-size: 10px !important;
+      white-space: nowrap;
+    }
 
     span {
       position: relative;
@@ -1248,7 +1526,10 @@
     width: 40px;
     height: 40px;
     @include flex-center;
-    @include ease;
+
+    svg {
+      @include ease;
+    }
 
     &:hover {
       svg {
@@ -1534,3 +1815,79 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.credit-banner {
+  position: relative;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #E1FBF7;
+  overflow: hidden;
+
+  div, a {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__picture {
+    position: absolute;
+    width: 380px;
+    height: 801px;
+    top: -290px;
+    right: -40px;
+    color: #69EAD6;
+
+    @include r($breakpoint-35) {
+      width: 100%;
+      height: 680px;
+      top: 50%;
+      left: 50%;
+      right: auto;
+      transform: translate(-50%, -50%) !important;
+      opacity: .6;
+    }
+  }
+}
+
+.doc-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+
+  @include r($breakpoint-35) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  div:first-child {
+    color: $dark-700;
+  }
+  &:not(:last-child) {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #EAEAEC;
+  }
+}
+
+.doc-thumbs {
+  display: flex;
+  gap: 4px;
+
+  &__item {
+    border-radius: 4px;
+    @include cv;
+    width: 32px;
+    height: 32px;
+
+    &--more {
+      border: 1px solid #D5C0E5;
+      background-color: #F4EEF8;
+      @include flex-center;
+      @include font-medium;
+      color: #732DA9;
+      font-size: 16px;
+      letter-spacing: -0.8px;
+    }
+  }
+}
+

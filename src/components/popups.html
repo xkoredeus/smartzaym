@@ -446,6 +446,12 @@
                     </svg>
                     <span class="text4">Сделать фото</span>
                 </button>
+
+                <button class="button button-fourthary button--square button--circle">
+                    <svg width="24" height="24">
+                        <use xlink:href="#pin"></use>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
@@ -494,7 +500,7 @@
 
             <div class="popup-photo__actions">
                 <button class="button button-fourthary button--sm size16 button-icon gap-8 js-photo-step-4">
-                    <span class="text4">Переснять</span>
+                    <span class="text4">Изменить</span>
                 </button>
             </div>
         </div>
@@ -552,6 +558,12 @@
                         <use xlink:href="#camera"></use>
                     </svg>
                     <span class="text4">Сделать фото</span>
+                </button>
+
+                <button class="button button-fourthary button--square button--circle">
+                    <svg width="24" height="24">
+                        <use xlink:href="#pin"></use>
+                    </svg>
                 </button>
             </div>
         </div>
@@ -675,17 +687,27 @@
             <div class="mobile-photo__actions">
                 <button class="font-medium button--sm button-link size16 color-white js-toggle-instruction">Инструкция</button>
 
-                <button data-src="#popup-mobile-photo-3" data-fancybox>
-                    <svg width="64" height="64">
-                        <use xlink:href="#camera-action"></use>
-                    </svg>
-                </button>
+                <div class="mobile-photo__actions-center">
+                    <button data-src="#popup-mobile-photo-3" data-fancybox>
+                        <svg width="64" height="64">
+                            <use xlink:href="#camera-action"></use>
+                        </svg>
+                    </button>
+                    <button>
+                        <svg width="40" height="40">
+                            <use xlink:href="#camera-rotation"></use>
+                        </svg>
+                    </button>
+                </div>
+
 
                 <button>
                     <svg width="40" height="40">
-                        <use xlink:href="#camera-rotation"></use>
+                        <use xlink:href="#camera-pin"></use>
                     </svg>
                 </button>
+
+
             </div>
         </div>
     </div>
@@ -716,7 +738,120 @@
             <div class="mobile-photo-result__picture" style="background-image: url('{{root}}assets/img/passport.jpg');"></div>
 
             <div class="mobile-photo-result__actions">
-                <button class="button button-fourthary button--sm radius8 size16">Переснять</button>
+                <button class="button button-fourthary button--sm radius8 size16">Изменить</button>
+                <button class="button button-primary button--sm radius8 size16" data-fancybox data-src="#popup-mobile-photo-4">Продолжить</button>
+                <button class="button-link button-sm size16 font-medium">К предыдщуему шагу</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup-mobile-photo-4" class="popup__wrapper popup__wrapper--mobile-photo" style="display: none; background-image: url('{{root}}assets/img/passport.jpg');">
+    <div class="mobile-photo__in mobile-photo__in--active">
+        <div class="mobile-photo__content">
+            <div class="mobile-photo__top">
+                <div class="font-medium size24 ls08 mb-1">Паспорт ТС</div>
+                <div class="text5 mb-2">Сделайте фото ПТС или добавьте файл с ЭПТС.</div>
+
+                <div class="popup-photo__header">
+                    <div class="profile-steps">
+                        <div class="profile-step profile-step--active"></div>
+                        <div class="profile-step"></div>
+                        <div class="profile-step"></div>
+                    </div>
+
+                    <div class="text4">Шаг X из N</div>
+                </div>
+            </div>
+
+            <div class="mobile-photo__frame-wrapper">
+                <div class="mobile-photo__frame">
+                    <svg width="56" height="56"><use xlink:href="#frame-border"></use></svg>
+                    <svg width="56" height="56"><use xlink:href="#frame-border"></use></svg>
+                    <svg width="56" height="56"><use xlink:href="#frame-border"></use></svg>
+                    <svg width="56" height="56"><use xlink:href="#frame-border"></use></svg>
+                </div>
+            </div>
+
+            <div class="mobile-photo__actions">
+                <button class="font-medium button--sm button-link size16 color-white js-toggle-instruction">Инструкция</button>
+
+                <div class="mobile-photo__actions-center">
+                    <button data-src="#popup-mobile-photo-3" data-fancybox>
+                        <svg width="64" height="64">
+                            <use xlink:href="#camera-action"></use>
+                        </svg>
+                    </button>
+                    <button>
+                        <svg width="40" height="40">
+                            <use xlink:href="#camera-rotation"></use>
+                        </svg>
+                    </button>
+                </div>
+
+
+                <button data-src="#popup-mobile-photo-5" data-fancybox>
+                    <svg width="40" height="40">
+                        <use xlink:href="#camera-pin"></use>
+                    </svg>
+                </button>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup-mobile-photo-5" class="popup__wrapper popup__wrapper--mobile-photo popup__wrapper-prevent-close" style="display: none;">
+    <div class="mobile-photo__in">
+        <div class="fancybox-close-small">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+            </svg>
+        </div>
+        <div class="mobile-photo__content">
+            <div class="mobile-photo__top">
+                <div class="font-medium size24 ls08 mb-1">Паспорт ТС</div>
+                <div class="text5 mb-2">Сделайте фото ПТС или добавьте файл с ЭПТС.</div>
+
+                <div class="popup-photo__header">
+                    <div class="profile-steps">
+                        <div class="profile-step profile-step--active"></div>
+                        <div class="profile-step"></div>
+                        <div class="profile-step"></div>
+                    </div>
+
+                    <div class="text4">Шаг X из N</div>
+                </div>
+            </div>
+
+            <div class="mobile-photo-result__pts">
+                <div class="mobile-photo-result__pts-doc tac">
+                    <div class="mobile-photo-result__pts-doc-icon">
+                        <svg width="80" height="80">
+                            <use xlink:href="#invoice"></use>
+                        </svg>
+                    </div>
+                    <div class="font-medium">epts-bmw5-f10-2016</div>
+                    <div class="text5 color-dark-700">PDF, 568kb</div>
+                </div>
+
+                <div class="mobile-photo-result__pts-checkbox">
+                    <label class="checkbox text5">
+                        <input type="checkbox">
+                        <span class="checkbox__text">
+                            <svg><use xlink:href="#check"></use></svg>
+                            <span class="lh12">
+                                <span class="font-medium size16 mb-1 d-inline-block">У меня ЭПТС</span> <br>
+                                <span class="color-dark-700">Поставив галочку, Вы пропустите следующие шаги с добавлением бумажного ПТС</span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+
+            </div>
+
+
+            <div class="mobile-photo-result__actions">
+                <button class="button button-fourthary button--sm radius8 size16">Изменить</button>
                 <button class="button button-primary button--sm radius8 size16">Продолжить</button>
                 <button class="button-link button-sm size16 font-medium">К предыдщуему шагу</button>
             </div>
@@ -1004,5 +1139,337 @@
                 </svg>
             </a>
         </div>
+    </div>
+</div>
+
+
+<div id="popup-graphic" class="popup__wrapper bg-white popup__wrapper--common popup__wrapper--xl p32" style="display: none">
+    <div class="popup__in popup__in--align-start">
+        <div class="title-h6 font-medium spacing-4 lh12">График платежей</div>
+
+        <div class="graphic-wrapper">
+            <div class="graphic">
+                <div class="graphic-header">
+                    <div class="graphic-row">
+                        <div>Дата платежа</div>
+                        <div>Сумма платежа</div>
+                        <div>Проценты</div>
+                        <div>Тело кредита</div>
+                        <div>Долг на конец месяца</div>
+                    </div>
+                </div>
+                <div class="graphic-body">
+                    <div class="graphic-row">
+                        <div>12.08.2024</div>
+                        <div>15 000 ₽</div>
+                        <div>3 000 ₽</div>
+                        <div>13 000 ₽</div>
+                        <div>235 000 ₽</div>
+                    </div>
+                    <div class="graphic-row">
+                        <div>12.08.2024</div>
+                        <div>15 000 ₽</div>
+                        <div>3 000 ₽</div>
+                        <div>13 000 ₽</div>
+                        <div>235 000 ₽</div>
+                    </div>
+                    <div class="graphic-row">
+                        <div>12.08.2024</div>
+                        <div>15 000 ₽</div>
+                        <div>3 000 ₽</div>
+                        <div>13 000 ₽</div>
+                        <div>235 000 ₽</div>
+                    </div>
+                    <div class="graphic-row">
+                        <div>12.08.2024</div>
+                        <div>15 000 ₽</div>
+                        <div>3 000 ₽</div>
+                        <div>13 000 ₽</div>
+                        <div>235 000 ₽</div>
+                    </div>
+                    <div class="graphic-row">
+                        <div>12.08.2024</div>
+                        <div>15 000 ₽</div>
+                        <div>3 000 ₽</div>
+                        <div>13 000 ₽</div>
+                        <div>235 000 ₽</div>
+                    </div>
+                    <div class="graphic-row">
+                        <div>12.08.2024</div>
+                        <div>15 000 ₽</div>
+                        <div>3 000 ₽</div>
+                        <div>13 000 ₽</div>
+                        <div>235 000 ₽</div>
+                    </div>
+                    <div class="graphic-row">
+                        <div>12.08.2024</div>
+                        <div>15 000 ₽</div>
+                        <div>3 000 ₽</div>
+                        <div>13 000 ₽</div>
+                        <div>235 000 ₽</div>
+                    </div>
+                    <div class="graphic-row">
+                        <div>12.08.2024</div>
+                        <div>15 000 ₽</div>
+                        <div>3 000 ₽</div>
+                        <div>13 000 ₽</div>
+                        <div>235 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup-payment-switch" class="popup__wrapper p40 popup__wrapper--common popup__wrapper--sm" style="display: none">
+    <div class="popup__in popup__in--align-start">
+        <div class="title-h6 size24 font-medium spacing-35 lh12">По какому займу вносится платеж?</div>
+
+        <form class="popup-call__in">
+            <div class="spacing-35">
+                <label class="credit-payment mb-2">
+                    <input type="radio" checked name="payment-switch">
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="mb-1 d-flex flex-wrap align-items-center gap-8 row-gap-4">
+                                    <span class="size16 font-medium ls08">№ 5900093</span>
+                                    <span class="appeal-card__label appeal-card__label--active"><span>Активный</span></span>
+                                </span>
+                                <span class="text5 color-dark-700">Текущая задолженность: 12 900 ₽</span>
+                            </span>
+                        </span>
+                    </span>
+                </label>
+                <label class="credit-payment mb-2">
+                    <input type="radio" name="payment-switch">
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="mb-1 d-flex flex-wrap align-items-center gap-8 row-gap-4">
+                                    <span class="size16 font-medium ls08">№ 5900093</span>
+                                    <span class="appeal-card__label appeal-card__label--active"><span>Активный</span></span>
+                                </span>
+                                <span class="text5 color-dark-700">Текущая задолженность: 12 900 ₽</span>
+                            </span>
+                        </span>
+                    </span>
+                </label>
+                <label class="credit-payment mb-2">
+                    <input type="radio" name="payment-switch">
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="mb-1 d-flex flex-wrap align-items-center gap-8 row-gap-4">
+                                    <span class="size16 font-medium ls08">№ 5900093</span>
+                                    <span class="appeal-card__label appeal-card__label--active"><span>Активный</span></span>
+                                </span>
+                                <span class="text5 color-dark-700">Текущая задолженность: 12 900 ₽</span>
+                            </span>
+                        </span>
+                    </span>
+                </label>
+
+            </div>
+
+            <button class="button button-primary radius8 button--sm w-100 size16" data-src="#popup-payment-2" data-fancybox>Продолжить</button>
+        </form>
+    </div>
+</div>
+
+<div id="popup-payment-2" class="popup__wrapper popup__wrapper--common popup__wrapper--sm" style="display: none">
+    <div class="popup__in popup__in--align-start">
+
+        <a href="#" class="button button-icon link-purple size16 p-0 spacing-4" data-src="#popup-payment-switch" data-fancybox>
+            <svg width="24" height="24">
+                <use xlink:href="#arrow-right-3"></use>
+            </svg>
+            <span>Назад</span>
+        </a>
+
+        <div class="font-medium mb-2 lh12">Сумма текущей задолженности</div>
+
+        <div class="amount-wrapper spacing-35">
+            <input type="text" class="width-dynamic js-amount" value="12500" placeholder="Сумма">
+            <div class="amount-unit">₽</div>
+        </div>
+
+        <div class="font-medium lh12 spacing-4">Способ внесения платежа</div>
+
+        <form class="popup-call__in">
+            <div class="popup-card__fields spacing-4">
+
+                <label class="credit-payment mb-2">
+                    <input type="radio" name="popup-payment" checked>
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="font-medium mb-1">**** **** **** **22</span>
+                                <span class="text5 color-dark-700">Действительна до: 12/25</span>
+                            </span>
+                            <svg width="66" height="20">
+                                <use xlink:href="#card-2-1"></use>
+                            </svg>
+                        </span>
+                    </span>
+                </label>
+                <label class="credit-payment mb-2">
+                    <input type="radio" name="popup-payment">
+                    <span class="credit-payment__in">
+                        <span class="credit-payment__header">
+                            <span></span>
+                            <span>
+                                <span class="font-medium mb-1">Через СБП</span>
+                                <span class="text5 color-dark-700">Сервис платежной системы ЦБ РФ</span>
+                            </span>
+                            <svg width="86" height="31">
+                                <use xlink:href="#card-5"></use>
+                            </svg>
+                        </span>
+                    </span>
+                </label>
+            </div>
+
+
+            <button class="button button-secondary button--xs button-icon w-100 radius8 gap-8 spacing-35">
+                <svg width="24" height="24">
+                    <use xlink:href="#card"></use>
+                </svg>
+                <span class="size14">Добавить карту</span>
+            </button>
+            <button class="button button-primary button--xs button-icon w-100 radius8 gap-8 spacing-4" data-src="#popup-payment-success" data-fancybox>
+                Оплатить 13 500 ₽
+            </button>
+
+            <div class="tac color-gray-hz text4">В том числе комиссия банка 500 ₽ </div>
+        </form>
+    </div>
+</div>
+
+
+<div id="popup-doc-gallery" class="popup__wrapper bg-white popup__wrapper--common popup__wrapper--gallery" style="display: none">
+    <div class="popup__in popup__in--align-start">
+        <div class="w-100">
+            <div class="gallery-top__wrapper">
+                <div class="gallery-top js-gallery-top-slider">
+                    <div class="swiper-wrapper">
+                        <!--slides-->
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-top__picture"></div>
+                        </div>
+                        <!--/slides-->
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-bottom__wrapper">
+            <div class="swiper-nav gallery-nav">
+                <button class="js-gallery-slider-prev">
+                    <span class="gallery-nav__button">
+                        <svg width="34" height="34">
+                            <use xlink:href="#chevron-left"></use>
+                        </svg>
+                    </span>
+
+                </button>
+                <button class="js-gallery-slider-next">
+                    <span class="gallery-nav__button">
+                        <svg width="34" height="34">
+                            <use xlink:href="#chevron-right"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="slider-wrapper">
+                <div class="gallery-bottom js-gallery-bottom-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-bottom__picture"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="w-100 d-flex justify-content-center">
+            <button class="button button-secondary button--sm button-icon ml-auto mr-auto">
+                <svg width="24" height="24">
+                    <use xlink:href="#pencil-2"></use>
+                </svg>
+                <span class="text4">Изменить</span>
+            </button>
+        </div>
+
     </div>
 </div>

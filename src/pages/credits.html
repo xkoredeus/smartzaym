@@ -3,10 +3,10 @@ layout: cabinet
 ---
 <div class="row">
     <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
-        <div class="spacing-4 d-flex justify-content-between align-items-center">
-            <div class="title-h45 font-medium ls08">Мои займы</div>
+        <div class="spacing-4 d-flex justify-content-between align-items-sm-center flex-column flex-sm-row">
+            <div class="title-h45 font-medium ls08 mb-2 mb-sm-0">Мои займы</div>
 
-            <a href="credit-create-1.html" class="button button-primary button-icon button--sm radius8">
+            <a href="credit-create-1.html" class="button button-primary button-icon button--sm radius8 w-xs-100">
                 <svg width="24" height="24">
                     <use xlink:href="#plus-2"></use>
                 </svg>
@@ -14,15 +14,28 @@ layout: cabinet
             </a>
         </div>
 
-        <div class="leaf ls04">
-            <div class="appeals-types spacing-35">
-                <button class="appeals-type appeals-type--active">Все займы</button>
-                <button class="appeals-type">Активные</button>
-                <button class="appeals-type">Погашенные</button>
-                <button class="appeals-type">Неодобренные</button>
+        <div class="leaf leaf-main ls04">
+            <div class="appeals-types-wrapper">
+                <div class="appeals-types spacing-35">
+                    <button class="appeals-type appeals-type--active">Все займы</button>
+                    <button class="appeals-type">Активные</button>
+                    <button class="appeals-type">Погашенные</button>
+                    <button class="appeals-type">Неодобренные</button>
+                </div>
             </div>
 
+
             <div class="d-flex flex-column gap-8">
+                <div class="credit-banner">
+                    <div class="title-h6 font-medium ls06 spacing-4">
+                        Вам доступно<br>
+                        до 600 000 ₽
+                    </div>
+                    <a href="credit-create-1.html" class="button button-primary button--sm radius8 size16">Подать заявку</a>
+                    <svg class="credit-banner__picture">
+                        <use xlink:href="#zipper"></use>
+                    </svg>
+                </div>
                 <div class="appeal-card leaf leaf-border leaf--sm">
                     <div class="appeal-card__header spacing-4">
                         <div class="appeal-card__title">
