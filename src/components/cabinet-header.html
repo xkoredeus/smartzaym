@@ -1,5 +1,5 @@
 <header class="cabinet-header">
-    <div class="container">
+    <div class="cabinet-header__container">
         <div class="profile-header__in">
             <div class="d-flex align-items-center">
                 <button class="burger js-cabinet-menu-toggle">
@@ -14,17 +14,25 @@
             </div>
 
 
-            <div class="cabinet-header__info">
-                <div class="cabinet-header__tel-wrapper">
-                    <div class="cabinet-header__tel">
-                        <div class="text4 font-medium">Алексей Константинов</div>
-                        <a href="tel:+7 992 564-00-11" class="text5 color-dark-700">+7 992 564-00-11</a>
+            <div class="cabinet-header__info js-toggle-header-dropdown">
+                <div class="cabinet-header__info-content">
+                    <div class="cabinet-header__tel-wrapper">
+                        <div class="cabinet-header__tel">
+                            <div class="text4 font-medium">Алексей Константинов</div>
+                            <span class="text5 color-dark-700">+7 992 564-00-11</span>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-header__photo">
+                        АК
                     </div>
                 </div>
 
-                <a href="#" class="cabinet-header__photo">
-                    АК
-                </a>
+
+                <div class="cabinet-header__dropdown">
+                    <a href="my-profile.html" class="cabinet-header__dropdown-link">Профиль</a>
+                    <a href="#" class="cabinet-header__dropdown-link">Выйти</a>
+                </div>
             </div>
         </div>
     </div>

@@ -16,21 +16,30 @@
     padding-top: 32px;
     padding-bottom: 32px;
   }
+
+  a {
+    color: #A9AAB2;
+  }
+
+  .link-underline:hover {
+    color: $dark-100;
+  }
 }
 
 .footer-link {
-  color: currentColor;
   span {
-    color: currentColor;
+    color: $dark-400;
   }
   svg {
-    fill: currentColor;
+    fill: $dark-400;
   }
 
   &:hover {
-    color: $purple;
+    svg {
+      fill: $dark-100;
+    }
     span {
-      color: $purple;
+      color: $dark-100;
     }
   }
 }
@@ -76,9 +85,14 @@
   row-gap: 16px;
 
   &__link {
-    color: $white;
+    color: $white !important;
     @include text3;
     @include font-medium;
+    border-bottom: 1px solid $tr;
+
+    &:hover {
+      border-bottom-color: $white;
+    }
   }
 }
 
@@ -117,4 +131,26 @@
     position: relative;
     z-index: 1;
   }
+}
+
+.footer-profile {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: #A9AAB2;
+  background-color: $dark;
+
+ &__in {
+   font-size: 12px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 40px;
+   row-gap: 12px;
+
+   .footer-link {
+     &:hover {
+       color: #A9AAB2;
+       border-bottom-color: $tr;
+     }
+   }
+ }
 }

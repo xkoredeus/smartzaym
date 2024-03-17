@@ -41,6 +41,23 @@
     }
   }
 
+  &--xl {
+    max-width: 1016px;
+    padding: 32px;
+    @include r($breakpoint-35) {
+      max-width: unset;
+      padding: 40px 16px 16px;
+    }
+  }
+
+  &--gallery {
+    max-width: 655px;
+    padding: 15px;
+    @include r($breakpoint-35) {
+      max-width: unset;
+    }
+  }
+
   &--lg {
     max-width: 600px;
     @include r($breakpoint-35) {
@@ -59,6 +76,13 @@
     max-width: 496px;
     @include r($breakpoint-35) {
       max-width: unset;
+    }
+  }
+
+  &.p40 {
+    padding: 40px;
+    @include r($breakpoint-35) {
+      padding: 40px 16px 16px;
     }
   }
 
@@ -427,6 +451,9 @@
       left: 50%;
       z-index: 2;
       transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
 
     &__preview {
@@ -452,6 +479,8 @@
   border-radius: 0;
   position: relative;
   @include cv;
+
+  background-color: #fff;
 
   &--active {
     background-color: #282B40;
@@ -562,6 +591,15 @@
           margin-right: 0;
         }
       }
+
+
+      &-center {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-right: -64px;
+      }
+
     }
   }
 
@@ -578,6 +616,41 @@
       @include r($breakpoint-35) {
         height: 380px;
         margin-bottom: auto;
+      }
+    }
+
+    &__pts {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+
+
+      &-doc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &-doc-icon {
+        width: 124px;
+        height: 124px;
+        @include flex-center;
+        background-color: $dark-30;
+        border-radius: 50%;
+        margin-bottom: 16px;
+        margin-top: 14px;
+
+        svg {
+          fill: $purple;
+        }
+      }
+
+      &-checkbox {
+        background-color: #F9F9F9;
+        padding: 12px 8px;
+        border-radius: 8px;
+        border: 1px solid #EAEAEC;
       }
     }
     &__actions {
@@ -643,6 +716,146 @@
       display: grid;
       grid-template-columns: auto 1fr;
       grid-gap: 8px;
+    }
+  }
+}
+
+.bg-white {
+  background-color: #fff;
+}
+.graphic {
+  width: 956px;
+  font-size: 14px;
+
+  &-wrapper {
+    overflow-y: auto;
+    padding-bottom: 5px;
+  }
+
+  &-header {
+    background-color: #F4EEF8;
+    color: $purple;
+    @include font-medium;
+  }
+
+  &-body {
+    .graphic-row {
+      &:nth-child(even) {
+        background-color: #F9F9F9;
+      }
+    }
+  }
+  &-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    & > div {
+      flex-grow: 1;
+      padding: 12px 16px;
+    }
+  }
+
+
+}
+
+.popup__wrapper--gallery .fancybox-close-small {
+  background-color: #616473;
+  border-radius: 8px;
+
+  &:hover {
+    color: #A9AAB2;
+  }
+}
+
+.gallery-top {
+  &__wrapper {
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__picture {
+    width: 100%;
+    height: 634px;
+    @include cv;
+    background-color: #E8E8E8;
+    border-radius: 16px;
+
+    @include r($breakpoint-2) {
+      height: 400px;
+    }
+
+    @include r($breakpoint-35) {
+      height: 450px;
+    }
+  }
+}
+
+.gallery-bottom {
+  &__picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #E8E8E8;
+    @include cv;
+    border: 2px solid $tr;
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+
+    .swiper-slide {
+      width: 55px;
+      height: 55px;
+
+    }
+
+    .swiper-slide-thumb-active {
+      .gallery-bottom__picture {
+        border-color: $purple;
+      }
+    }
+  }
+}
+
+.gallery-nav {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 100;
+  &__button {
+    @include flex-center;
+    width: 25px;
+    height: 25px;
+    background-color: #616473;
+    border-radius: 50%;
+  }
+  button {
+    width: 40px;
+    height: 55px;
+    box-shadow: unset;
+    transform: none;
+    border-radius: unset;
+    @include flex-center;
+    transition: unset;
+
+    &:first-child {
+      left: 0;
+      right: auto;
+      background: linear-gradient(90deg, #fff 0%, $tr 100%);
+    }
+
+    &:last-child {
+      right: 0;
+      left: auto;
+      background: linear-gradient(90deg, $tr 0%, #fff 100%);
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+      stroke: $white;
     }
   }
 }

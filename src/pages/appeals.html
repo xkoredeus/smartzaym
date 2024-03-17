@@ -1,10 +1,10 @@
 ---
 layout: cabinet
 ---
-<div class="spacing-4 d-flex justify-content-between align-items-center">
-    <div class="title-h45 font-medium ls08">Мои обращения</div>
+<div class="spacing-4 d-flex justify-content-between align-items-sm-center flex-column flex-sm-row">
+    <div class="title-h45 font-medium ls08 mb-2 mb-sm-0">Мои обращения</div>
 
-    <a href="appeal-create.html" class="button button-primary button-icon button--sm radius8">
+    <a href="appeal-create.html" class="button button-primary button-icon button--sm radius8 w-xs-100">
         <svg width="24" height="24">
             <use xlink:href="#plus-2"></use>
         </svg>
@@ -12,16 +12,21 @@ layout: cabinet
     </a>
 </div>
 <div class="row">
-    <div class="col-lg-4">
+    <div class="col-xl-4">
         <div class="appeals-nav">
+            <button class="appeals-nav__button">
+                <svg width="24" height="24">
+                    <use xlink:href="#chevron-bottom-4"></use>
+                </svg>
+            </button>
             <a href="#" class="appeals-nav__link appeals-nav__link--active">Финансовые обращения</a>
-            <a href="#" class="appeals-nav__link">Официальные уведомления</a>
-            <a href="#" class="appeals-nav__link">Справки и документы</a>
-            <a href="#" class="appeals-nav__link">Жалобы</a>
+            <a href="#" class="appeals-nav__link appeals-nav__link--inactive">Официальные уведомления</a>
+            <a href="#" class="appeals-nav__link appeals-nav__link--inactive">Справки и документы</a>
+            <a href="#" class="appeals-nav__link appeals-nav__link--inactive">Жалобы</a>
         </div>
     </div>
-    <div class="col-lg-8">
-        <div class="leaf">
+    <div class="col-xl-8">
+        <div class="leaf leaf-main leaf-appeals">
             <div class="appeals-types spacing-35">
                 <button class="appeals-type appeals-type--active">Все обращения</button>
                 <button class="appeals-type">В работе</button>

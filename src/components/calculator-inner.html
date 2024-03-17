@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-xl-10 offset-xl-1">
+        <div class="row row-gap-8">
+            <div class="col-md-6">
+
+                {{> calc-range }}
+
+                <div class="color-dark-600 mb-2 mb-lg-3">Необходимые документы</div>
+                <div class="d-flex align-items-center gap-24">
+                    <div class="calc-doc">
+                        <div class="calc-doc__icon">
+                            <svg width="24" height="24">
+                                <use xlink:href="#calc-doc-1"></use>
+                            </svg>
+                        </div>
+                        <span class="font-medium text5 lh12">Паспорт<br> гражданина РФ</span>
+                    </div>
+                    <div class="calc-doc">
+                        <div class="calc-doc__icon">
+                            <svg width="24" height="19">
+                                <use xlink:href="#calc-doc-2"></use>
+                            </svg>
+                        </div>
+                        <span class="font-medium text5 lh12">Паспорт и свидетельство<br> о регистрации ТС</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="card card--border calc-info">
+                    <div class="spacing-4">
+                        <div class="calc-info__row">
+                            <div>Ежемесячный платеж от</div>
+                            <div class="calc-info__price font-medium ls04 title-h6">
+                                <button class="calc-button">
+                                    <svg>
+                                        <use xlink:href="#minus"></use>
+                                    </svg>
+                                </button>
+                                <span>24 489 ₽</span>
+                                <button class="calc-button">
+                                    <svg>
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="calc-info__row">
+                            <div>Месячная ставка</div>
+                            <div class="font-medium ls04 title-h6 tar">
+                                от 2,5%
+                            </div>
+                        </div>
+                        <div class="calc-info__row spacing">
+                            <div>Срок</div>
+                            <div class="font-medium ls04 title-h6 tar">
+                                6 месяцев
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="button button-primary w-100 spacing-4" data-fancybox data-src="#popup-request">Перейти к подаче заявки</button>
+                    <div class="text5 color-dark-500 lh11 tac">Расчет займа предварительный. Одобряем онлайн в течении часа. Можно закрыть досрочно, без штрафов и комиссий.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

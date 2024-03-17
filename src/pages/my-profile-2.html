@@ -23,6 +23,16 @@ layout: cabinet
 
         <div class="leaf">
             <div class="spacing-4">
+                <div class="my-profile__sec">
+                    <div class="my-profile__sec-text font-medium">
+                        После изменения фотографий потребуется <br>
+                        дополнительное подтверждение администратора
+                    </div>
+
+                    <img src="{{root}}assets/img/my-profile-attention.png" alt="Attention">
+                </div>
+            </div>
+            <div class="spacing-4">
                 <div class="card profile-document profile-document--success">
                     <div class="profile-document__content">
                         <div class="d-flex align-items-center gap-4 mb-1">
@@ -51,32 +61,16 @@ layout: cabinet
                     <div class="profile-document__actions">
                         <button class="button button-secondary button--sm button-icon js-toggle-popup-photo">
                             <svg width="24" height="24">
-                                <use xlink:href="#camera"></use>
+                                <use xlink:href="#pencil-2"></use>
                             </svg>
-                            <span class="text4">Переснять</span>
-                        </button>
-                        <button class="button button-fourthary button--square">
-                            <svg width="24" height="24">
-                                <use xlink:href="#pin"></use>
-                            </svg>
+                            <span class="text4">Изменить</span>
                         </button>
                     </div>
 
                 </div>
             </div>
 
-            <div class="spacing-4">
-                <div class="my-profile__sec">
-                    <div class="my-profile__sec-text font-medium">
-                        После изменения фотографий потребуется <br>
-                        дополнительное подтверждение администратора
-                    </div>
-
-                    <img src="{{root}}assets/img/my-profile-attention.png" alt="Attention">
-                </div>
-            </div>
-
-            <div class="credit-code__fields spacing-3">
+            <div class="credit-code__fields--small spacing-3">
                 <div class="form-field__wrapper">
                     <div class="form-field form-field--small form-field--bg">
                         <input type="text" id="signup-code" class="form-field__input font-medium js-mask-code" placeholder=" ">
